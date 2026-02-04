@@ -1,0 +1,3916 @@
+{
+    "search": {
+      "id": 329701012,
+      "created_at": "2026-02-04T12:32:51.727+00:00",
+      "updated_at": "2026-02-04T12:33:04.448+00:00",
+      "completed_at": "2026-02-04T12:33:04.448+00:00",
+      "freshness": "fresh",
+      "currency": "USD",
+      "two_stage_search_required": false,
+      "error_code": null,
+      "outbound_leg": {
+        "results": [
+          {
+            "products": [
+              {
+                "connections": [
+                  {
+                    "start_station": {
+                      "id": 48902,
+                      "name": "Graz Hbf",
+                      "iata_code": null
+                    },
+                    "start_meta_station": {
+                      "id": 222131,
+                      "name": "Graz",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 222399,
+                      "name": "Salzburg Hbf",
+                      "iata_code": null
+                    },
+                    "finish_meta_station": {
+                      "id": 62123,
+                      "name": "Salzburg",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-21T20:03:00.000+01:00",
+                    "arrival_time": "2026-02-22T00:06:00.000+01:00",
+                    "train_number": "656",
+                    "train_name": "Railjet",
+                    "train_code": null
+                  },
+                  {
+                    "start_station": {
+                      "id": 222399,
+                      "name": "Salzburg Hbf",
+                      "iata_code": null
+                    },
+                    "start_meta_station": {
+                      "id": 62123,
+                      "name": "Salzburg",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 1393,
+                      "name": "Feldkirch",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-22T02:30:00.000+01:00",
+                    "arrival_time": "2026-02-22T06:37:00.000+01:00",
+                    "train_number": "466",
+                    "train_name": "Nightjet",
+                    "train_code": null
+                  }
+                ],
+                "fares": [
+                  {
+                    "id": 8163228843,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228844,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228845,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228846,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228847,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228848,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228849,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228850,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228851,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228852,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228853,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228854,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228855,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228856,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228857,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228858,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163228859,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228860,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228861,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228862,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228863,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228864,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228865,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228866,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228867,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228868,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228869,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228870,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228871,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228872,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228873,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228874,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228875,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163228876,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228877,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228878,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228879,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228880,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228881,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228882,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228884,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228887,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228890,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228892,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163228895,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163228897,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228899,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228901,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228904,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228907,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228910,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228912,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228914,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228917,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228920,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228922,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163228924,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163228926,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228928,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228930,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163228932,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163228934,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163228937,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163228938,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228940,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228942,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228944,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228946,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228948,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228950,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228953,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228954,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163228956,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163228957,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163228959,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163228961,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228964,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228966,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228968,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228969,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228971,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228973,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228974,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228976,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228978,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163228980,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228982,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163228983,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228985,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163228987,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228989,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163228990,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228992,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163228994,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228995,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163228997,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163228999,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163229001,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163229004,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163229006,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229008,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229011,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229014,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229018,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229022,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229025,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229028,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229030,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163229032,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163229034,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229036,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229038,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163229040,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163229042,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229044,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229046,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229048,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229050,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229052,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229054,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229056,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229058,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163229059,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163229061,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163229062,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163229063,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163229064,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229065,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229066,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229067,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229068,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229069,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229070,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229071,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229072,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229073,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229074,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229075,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163229076,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229077,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229078,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7400
+                    }
+                  },
+                  {
+                    "id": 8163229079,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163229080,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229081,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229082,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229083,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229084,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229086,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12400
+                    }
+                  },
+                  {
+                    "id": 8163229087,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  },
+                  {
+                    "id": 8163229088,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11700
+                    }
+                  },
+                  {
+                    "id": 8163229089,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14900
+                    }
+                  },
+                  {
+                    "id": 8163229090,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229091,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16750
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "products": [
+              {
+                "connections": [
+                  {
+                    "start_station": {
+                      "id": 48902,
+                      "name": "Graz Hbf",
+                      "iata_code": null
+                    },
+                    "start_meta_station": {
+                      "id": 222131,
+                      "name": "Graz",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 65148,
+                      "name": "Linz Hbf",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-21T20:45:00.000+01:00",
+                    "arrival_time": "2026-02-21T23:56:00.000+01:00",
+                    "train_number": "804",
+                    "train_name": "Interregio",
+                    "train_code": null
+                  },
+                  {
+                    "start_station": {
+                      "id": 65148,
+                      "name": "Linz Hbf",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 1393,
+                      "name": "Feldkirch",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-22T00:50:00.000+01:00",
+                    "arrival_time": "2026-02-22T06:37:00.000+01:00",
+                    "train_number": "40462",
+                    "train_name": "Euro Night",
+                    "train_code": null
+                  }
+                ],
+                "fares": [
+                  {
+                    "id": 8163229092,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229093,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9250
+                    }
+                  },
+                  {
+                    "id": 8163229094,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11250
+                    }
+                  },
+                  {
+                    "id": 8163229095,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11450
+                    }
+                  },
+                  {
+                    "id": 8163229096,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12450
+                    }
+                  },
+                  {
+                    "id": 8163229097,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14650
+                    }
+                  },
+                  {
+                    "id": 8163229098,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11250
+                    }
+                  },
+                  {
+                    "id": 8163229099,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12450
+                    }
+                  },
+                  {
+                    "id": 8163229100,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19600
+                    }
+                  },
+                  {
+                    "id": 8163229101,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11250
+                    }
+                  },
+                  {
+                    "id": 8163229102,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 20850
+                    }
+                  },
+                  {
+                    "id": 8163229103,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12450
+                    }
+                  },
+                  {
+                    "id": 8163229104,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14650
+                    }
+                  },
+                  {
+                    "id": 8163229105,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19600
+                    }
+                  },
+                  {
+                    "id": 8163229106,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 23050
+                    }
+                  },
+                  {
+                    "id": 8163229108,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14650
+                    }
+                  },
+                  {
+                    "id": 8163229109,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 20850
+                    }
+                  },
+                  {
+                    "id": 8163229111,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19600
+                    }
+                  },
+                  {
+                    "id": 8163229112,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 20850
+                    }
+                  },
+                  {
+                    "id": 8163229114,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 23050
+                    }
+                  },
+                  {
+                    "id": 8163229115,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229116,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 23050
+                    }
+                  },
+                  {
+                    "id": 8163229117,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9250
+                    }
+                  },
+                  {
+                    "id": 8163229118,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11450
+                    }
+                  },
+                  {
+                    "id": 8163229120,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11250
+                    }
+                  },
+                  {
+                    "id": 8163229122,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12450
+                    }
+                  },
+                  {
+                    "id": 8163229123,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14650
+                    }
+                  },
+                  {
+                    "id": 8163229126,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19600
+                    }
+                  },
+                  {
+                    "id": 8163229128,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 20850
+                    }
+                  },
+                  {
+                    "id": 8163229130,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 23050
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "products": [
+              {
+                "connections": [
+                  {
+                    "start_station": {
+                      "id": 48902,
+                      "name": "Graz Hbf",
+                      "iata_code": null
+                    },
+                    "start_meta_station": {
+                      "id": 222131,
+                      "name": "Graz",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 65148,
+                      "name": "Linz Hbf",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-21T20:45:00.000+01:00",
+                    "arrival_time": "2026-02-21T23:56:00.000+01:00",
+                    "train_number": "804",
+                    "train_name": "Interregio",
+                    "train_code": null
+                  },
+                  {
+                    "start_station": {
+                      "id": 65148,
+                      "name": "Linz Hbf",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 222399,
+                      "name": "Salzburg Hbf",
+                      "iata_code": null
+                    },
+                    "finish_meta_station": {
+                      "id": 62123,
+                      "name": "Salzburg",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-22T00:26:00.000+01:00",
+                    "arrival_time": "2026-02-22T01:54:00.000+01:00",
+                    "train_number": "446",
+                    "train_name": "Nightjet",
+                    "train_code": null
+                  },
+                  {
+                    "start_station": {
+                      "id": 222399,
+                      "name": "Salzburg Hbf",
+                      "iata_code": null
+                    },
+                    "start_meta_station": {
+                      "id": 62123,
+                      "name": "Salzburg",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 1393,
+                      "name": "Feldkirch",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-22T02:30:00.000+01:00",
+                    "arrival_time": "2026-02-22T06:37:00.000+01:00",
+                    "train_number": "466",
+                    "train_name": "Nightjet",
+                    "train_code": null
+                  }
+                ],
+                "fares": [
+                  {
+                    "id": 8163229133,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229136,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229138,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229139,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229140,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229141,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229143,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229144,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229145,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229146,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229147,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229148,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229149,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229150,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229151,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229152,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229153,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229155,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229156,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229157,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229158,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229159,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229160,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229161,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229162,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229163,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229164,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229165,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229166,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229167,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229168,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229169,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229170,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229171,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229172,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229173,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229174,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229175,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229176,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229178,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229181,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229183,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229186,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229188,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229190,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229192,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229196,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229199,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229203,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229205,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229209,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229213,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229217,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229220,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229224,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229228,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229232,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229236,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229240,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229244,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229248,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229252,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229255,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229259,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229263,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229268,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229270,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229271,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229272,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229273,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229274,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229275,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229276,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229277,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229278,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229279,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229280,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229281,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229282,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229283,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229284,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229285,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229286,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229287,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229288,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229289,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229290,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229291,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229292,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229293,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229294,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229295,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229296,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229297,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229298,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229299,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229300,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229301,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229302,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229303,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229304,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229305,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229306,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229307,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229308,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229311,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229313,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229317,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229323,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229328,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229332,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229337,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229342,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229345,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229349,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229352,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229355,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229358,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229361,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229365,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229368,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229371,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229375,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229378,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229379,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229382,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229385,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229388,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229390,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229393,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229396,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229401,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229405,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229406,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229407,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229408,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229410,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229413,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229415,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8600
+                    }
+                  },
+                  {
+                    "id": 8163229416,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 9850
+                    }
+                  },
+                  {
+                    "id": 8163229418,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229420,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229422,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229424,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12050
+                    }
+                  },
+                  {
+                    "id": 8163229427,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229428,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229432,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 12950
+                    }
+                  },
+                  {
+                    "id": 8163229434,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 14150
+                    }
+                  },
+                  {
+                    "id": 8163229439,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  },
+                  {
+                    "id": 8163229447,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16350
+                    }
+                  },
+                  {
+                    "id": 8163229452,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 16000
+                    }
+                  },
+                  {
+                    "id": 8163229463,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 17250
+                    }
+                  },
+                  {
+                    "id": 8163229467,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 19450
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "products": [
+              {
+                "connections": [
+                  {
+                    "start_station": {
+                      "id": 48902,
+                      "name": "Graz Hbf",
+                      "iata_code": null
+                    },
+                    "start_meta_station": {
+                      "id": 222131,
+                      "name": "Graz",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 1393,
+                      "name": "Feldkirch",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-21T21:43:00.000+01:00",
+                    "arrival_time": "2026-02-22T07:21:00.000+01:00",
+                    "train_number": "464",
+                    "train_name": "Nightjet",
+                    "train_code": null
+                  }
+                ],
+                "fares": [
+                  {
+                    "id": 8163229471,
+                    "name": "Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229474,
+                    "name": "Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229476,
+                    "name": "Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229479,
+                    "name": "Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229480,
+                    "name": "Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229483,
+                    "name": "Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229485,
+                    "name": "Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229488,
+                    "name": "Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229490,
+                    "name": "Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229493,
+                    "name": "Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229496,
+                    "name": "Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229498,
+                    "name": "Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229500,
+                    "name": "Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229502,
+                    "name": "Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229505,
+                    "name": "Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229507,
+                    "name": "Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229508,
+                    "name": "Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229510,
+                    "name": "Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229511,
+                    "name": "Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229513,
+                    "name": "Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229515,
+                    "name": "Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229516,
+                    "name": "Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229518,
+                    "name": "Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229519,
+                    "name": "Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4350
+                    }
+                  },
+                  {
+                    "id": 8163229522,
+                    "name": "Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 6800
+                    }
+                  },
+                  {
+                    "id": 8163229526,
+                    "name": "Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229528,
+                    "name": "Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "products": [
+              {
+                "connections": [
+                  {
+                    "start_station": {
+                      "id": 48902,
+                      "name": "Graz Hbf",
+                      "iata_code": null
+                    },
+                    "start_meta_station": {
+                      "id": 222131,
+                      "name": "Graz",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 22587,
+                      "name": "Villach Hbf",
+                      "iata_code": null
+                    },
+                    "finish_meta_station": {
+                      "id": 222380,
+                      "name": "Villach",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-21T22:03:00.000+01:00",
+                    "arrival_time": "2026-02-21T23:27:00.000+01:00",
+                    "train_number": "654",
+                    "train_name": "Railjet",
+                    "train_code": null
+                  },
+                  {
+                    "start_station": {
+                      "id": 22587,
+                      "name": "Villach Hbf",
+                      "iata_code": null
+                    },
+                    "start_meta_station": {
+                      "id": 222380,
+                      "name": "Villach",
+                      "iata_code": null
+                    },
+                    "finish_station": {
+                      "id": 1393,
+                      "name": "Feldkirch",
+                      "iata_code": null
+                    },
+                    "departure_time": "2026-02-22T00:12:00.000+01:00",
+                    "arrival_time": "2026-02-22T07:21:00.000+01:00",
+                    "train_number": "40414",
+                    "train_name": "Euro Night",
+                    "train_code": null
+                  }
+                ],
+                "fares": [
+                  {
+                    "id": 8163229531,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229535,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229537,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229540,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229544,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229545,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229547,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229550,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229552,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229554,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229556,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229557,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229560,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229562,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229564,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229566,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229569,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229571,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229572,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229576,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229578,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229580,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229582,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229584,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229587,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229589,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229590,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229591,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229593,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229594,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229596,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229598,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229600,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229602,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229605,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229607,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229610,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229611,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229613,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229615,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229618,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229619,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229620,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229621,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229622,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229624,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229625,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229626,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229628,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229629,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229630,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229632,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229634,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229642,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229643,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229644,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229647,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229649,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229650,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229653,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229655,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229658,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229661,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229663,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229665,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229668,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229671,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229675,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229678,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229681,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229684,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229686,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229688,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229692,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229694,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229697,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229700,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229703,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 4950
+                    }
+                  },
+                  {
+                    "id": 8163229704,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229707,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229711,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 5550
+                    }
+                  },
+                  {
+                    "id": 8163229714,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229717,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  },
+                  {
+                    "id": 8163229719,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 7500
+                    }
+                  },
+                  {
+                    "id": 8163229722,
+                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8000
+                    }
+                  },
+                  {
+                    "id": 8163229724,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 8650
+                    }
+                  },
+                  {
+                    "id": 8163229726,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10550
+                    }
+                  },
+                  {
+                    "id": 8163229728,
+                    "name": "Sparschiene, Second, Non-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 10500
+                    }
+                  },
+                  {
+                    "id": 8163229730,
+                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 11100
+                    }
+                  },
+                  {
+                    "id": 8163229733,
+                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                    "price": {
+                      "currency": "USD",
+                      "cents": 13050
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "inbound_leg": null
+    }
+  }

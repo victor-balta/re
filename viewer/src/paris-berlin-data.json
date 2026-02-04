@@ -1,0 +1,532 @@
+{
+  "id": "paris-berlin-round-trip-demo",
+  "warnings": [],
+  "legs": [
+    {
+      "origin": { "label": "Paris Gare de l'Est" },
+      "destination": { "label": "Berlin Hauptbahnhof" },
+      "departure": "2026-03-15T07:00:00Z",
+      "solutions": [
+        {
+          "id": "outbound-direct-morning",
+          "departure": "2026-03-15T09:55:00Z",
+          "arrival": "2026-03-15T18:03:00Z",
+          "duration": "PT8H8M",
+          "segments": [
+            {
+              "id": "seg-paris-berlin-direct",
+              "departure": "2026-03-15T09:55:00Z",
+              "arrival": "2026-03-15T18:03:00Z",
+              "origin": { "label": "Paris Gare de l'Est" },
+              "destination": { "label": "Berlin Hauptbahnhof" },
+              "vehicle": { "reference": "ICE 9556" },
+              "marketingCarrier": "DB"
+            }
+          ]
+        },
+        {
+          "id": "outbound-direct-afternoon",
+          "departure": "2026-03-15T13:55:00Z",
+          "arrival": "2026-03-15T22:05:00Z",
+          "duration": "PT8H10M",
+          "segments": [
+            {
+              "id": "seg-paris-berlin-direct-aft",
+              "departure": "2026-03-15T13:55:00Z",
+              "arrival": "2026-03-15T22:05:00Z",
+              "origin": { "label": "Paris Gare de l'Est" },
+              "destination": { "label": "Berlin Hauptbahnhof" },
+              "vehicle": { "reference": "ICE 9558" },
+              "marketingCarrier": "DB"
+            }
+          ]
+        },
+        {
+          "id": "outbound-via-frankfurt",
+          "departure": "2026-03-15T07:07:00Z",
+          "arrival": "2026-03-15T17:52:00Z",
+          "duration": "PT10H45M",
+          "segments": [
+            {
+              "id": "seg-paris-frankfurt",
+              "departure": "2026-03-15T07:07:00Z",
+              "arrival": "2026-03-15T11:03:00Z",
+              "origin": { "label": "Paris Gare de l'Est" },
+              "destination": { "label": "Frankfurt (Main) Hbf" },
+              "vehicle": { "reference": "ICE 9553" },
+              "marketingCarrier": "SNCF"
+            },
+            {
+              "id": "seg-frankfurt-berlin",
+              "departure": "2026-03-15T13:56:00Z",
+              "arrival": "2026-03-15T17:52:00Z",
+              "origin": { "label": "Frankfurt (Main) Hbf" },
+              "destination": { "label": "Berlin Hauptbahnhof" },
+              "vehicle": { "reference": "ICE 1657" },
+              "marketingCarrier": "DB"
+            }
+          ]
+        },
+        {
+          "id": "outbound-via-cologne",
+          "departure": "2026-03-15T08:55:00Z",
+          "arrival": "2026-03-15T19:52:00Z",
+          "duration": "PT10H57M",
+          "segments": [
+            {
+              "id": "seg-paris-cologne",
+              "departure": "2026-03-15T08:55:00Z",
+              "arrival": "2026-03-15T12:30:00Z",
+              "origin": { "label": "Paris Gare de l'Est" },
+              "destination": { "label": "Köln Hauptbahnhof" },
+              "vehicle": { "reference": "Thalys 9441" },
+              "marketingCarrier": "Thalys"
+            },
+            {
+              "id": "seg-cologne-berlin",
+              "departure": "2026-03-15T15:12:00Z",
+              "arrival": "2026-03-15T19:52:00Z",
+              "origin": { "label": "Köln Hauptbahnhof" },
+              "destination": { "label": "Berlin Hauptbahnhof" },
+              "vehicle": { "reference": "ICE 947" },
+              "marketingCarrier": "DB"
+            }
+          ]
+        },
+        {
+          "id": "outbound-via-mannheim",
+          "departure": "2026-03-15T10:07:00Z",
+          "arrival": "2026-03-15T21:52:00Z",
+          "duration": "PT11H45M",
+          "segments": [
+            {
+              "id": "seg-paris-mannheim",
+              "departure": "2026-03-15T10:07:00Z",
+              "arrival": "2026-03-15T13:35:00Z",
+              "origin": { "label": "Paris Gare de l'Est" },
+              "destination": { "label": "Mannheim Hauptbahnhof" },
+              "vehicle": { "reference": "ICE 9555" },
+              "marketingCarrier": "SNCF"
+            },
+            {
+              "id": "seg-mannheim-berlin",
+              "departure": "2026-03-15T17:56:00Z",
+              "arrival": "2026-03-15T21:52:00Z",
+              "origin": { "label": "Mannheim Hauptbahnhof" },
+              "destination": { "label": "Berlin Hauptbahnhof" },
+              "vehicle": { "reference": "ICE 699" },
+              "marketingCarrier": "DB"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "origin": { "label": "Berlin Hauptbahnhof" },
+      "destination": { "label": "Paris Gare de l'Est" },
+      "departure": "2026-03-20T07:00:00Z",
+      "solutions": [
+        {
+          "id": "return-direct-morning",
+          "departure": "2026-03-20T08:13:00Z",
+          "arrival": "2026-03-20T16:25:00Z",
+          "duration": "PT8H12M",
+          "segments": [
+            {
+              "id": "seg-berlin-paris-direct",
+              "departure": "2026-03-20T08:13:00Z",
+              "arrival": "2026-03-20T16:25:00Z",
+              "origin": { "label": "Berlin Hauptbahnhof" },
+              "destination": { "label": "Paris Gare de l'Est" },
+              "vehicle": { "reference": "ICE 9557" },
+              "marketingCarrier": "DB"
+            }
+          ]
+        },
+        {
+          "id": "return-direct-afternoon",
+          "departure": "2026-03-20T12:13:00Z",
+          "arrival": "2026-03-20T20:25:00Z",
+          "duration": "PT8H12M",
+          "segments": [
+            {
+              "id": "seg-berlin-paris-direct-aft",
+              "departure": "2026-03-20T12:13:00Z",
+              "arrival": "2026-03-20T20:25:00Z",
+              "origin": { "label": "Berlin Hauptbahnhof" },
+              "destination": { "label": "Paris Gare de l'Est" },
+              "vehicle": { "reference": "ICE 9559" },
+              "marketingCarrier": "DB"
+            }
+          ]
+        },
+        {
+          "id": "return-via-frankfurt",
+          "departure": "2026-03-20T06:08:00Z",
+          "arrival": "2026-03-20T16:55:00Z",
+          "duration": "PT10H47M",
+          "segments": [
+            {
+              "id": "seg-berlin-frankfurt-ret",
+              "departure": "2026-03-20T06:08:00Z",
+              "arrival": "2026-03-20T10:03:00Z",
+              "origin": { "label": "Berlin Hauptbahnhof" },
+              "destination": { "label": "Frankfurt (Main) Hbf" },
+              "vehicle": { "reference": "ICE 1656" },
+              "marketingCarrier": "DB"
+            },
+            {
+              "id": "seg-frankfurt-paris-ret",
+              "departure": "2026-03-20T13:07:00Z",
+              "arrival": "2026-03-20T16:55:00Z",
+              "origin": { "label": "Frankfurt (Main) Hbf" },
+              "destination": { "label": "Paris Gare de l'Est" },
+              "vehicle": { "reference": "ICE 9552" },
+              "marketingCarrier": "SNCF"
+            }
+          ]
+        },
+        {
+          "id": "return-via-cologne",
+          "departure": "2026-03-20T07:08:00Z",
+          "arrival": "2026-03-20T18:05:00Z",
+          "duration": "PT10H57M",
+          "segments": [
+            {
+              "id": "seg-berlin-cologne-ret",
+              "departure": "2026-03-20T07:08:00Z",
+              "arrival": "2026-03-20T11:48:00Z",
+              "origin": { "label": "Berlin Hauptbahnhof" },
+              "destination": { "label": "Köln Hauptbahnhof" },
+              "vehicle": { "reference": "ICE 948" },
+              "marketingCarrier": "DB"
+            },
+            {
+              "id": "seg-cologne-paris-ret",
+              "departure": "2026-03-20T14:28:00Z",
+              "arrival": "2026-03-20T18:05:00Z",
+              "origin": { "label": "Köln Hauptbahnhof" },
+              "destination": { "label": "Paris Gare de l'Est" },
+              "vehicle": { "reference": "Thalys 9442" },
+              "marketingCarrier": "Thalys"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "offers": [
+    {
+      "id": "outbound-direct-morning-std-super-saver",
+      "legSolution": "outbound-direct-morning",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Super Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 79.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-direct-morning-std-saver",
+      "legSolution": "outbound-direct-morning",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 99.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-direct-morning-std-flex",
+      "legSolution": "outbound-direct-morning",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 149.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-direct-morning-first-flex",
+      "legSolution": "outbound-direct-morning",
+      "comfortCategory": { "label": "First Class" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 219.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-direct-afternoon-std-saver",
+      "legSolution": "outbound-direct-afternoon",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 89.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-direct-afternoon-std-flex",
+      "legSolution": "outbound-direct-afternoon",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 139.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-direct-afternoon-first-flex",
+      "legSolution": "outbound-direct-afternoon",
+      "comfortCategory": { "label": "First Class" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 209.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-via-frankfurt-std-saver",
+      "legSolution": "outbound-via-frankfurt",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 119.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-via-frankfurt-std-flex",
+      "legSolution": "outbound-via-frankfurt",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 169.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-via-frankfurt-first-flex",
+      "legSolution": "outbound-via-frankfurt",
+      "comfortCategory": { "label": "First Class" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 249.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-via-cologne-std-saver",
+      "legSolution": "outbound-via-cologne",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 109.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-via-cologne-std-flex",
+      "legSolution": "outbound-via-cologne",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 159.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-via-mannheim-std-saver",
+      "legSolution": "outbound-via-mannheim",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 99.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "outbound-via-mannheim-std-flex",
+      "legSolution": "outbound-via-mannheim",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 149.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-direct-morning-std-saver",
+      "legSolution": "return-direct-morning",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 94.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-direct-morning-std-flex",
+      "legSolution": "return-direct-morning",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 144.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-direct-morning-first-flex",
+      "legSolution": "return-direct-morning",
+      "comfortCategory": { "label": "First Class" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 214.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-direct-afternoon-std-saver",
+      "legSolution": "return-direct-afternoon",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 99.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-direct-afternoon-std-flex",
+      "legSolution": "return-direct-afternoon",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 149.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-direct-afternoon-first-flex",
+      "legSolution": "return-direct-afternoon",
+      "comfortCategory": { "label": "First Class" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 219.90, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-via-frankfurt-std-saver",
+      "legSolution": "return-via-frankfurt",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 114.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-via-frankfurt-std-flex",
+      "legSolution": "return-via-frankfurt",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 164.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-via-cologne-std-saver",
+      "legSolution": "return-via-cologne",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Saver" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 104.80, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "return-via-cologne-std-flex",
+      "legSolution": "return-via-cologne",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 154.80, "currency": "EUR" }
+          }
+        }
+      }
+    }
+  ]
+}

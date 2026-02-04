@@ -1,0 +1,334 @@
+{
+  "id": "demo-multi-leg-round-trip",
+  "warnings": [],
+  "legs": [
+    {
+      "origin": { "label": "Barcelona Sants" },
+      "destination": { "label": "Paris Gare de Lyon" },
+      "departure": "2026-02-15T08:00:00Z",
+      "solutions": [
+        {
+          "id": "outbound-solution-1",
+          "departure": "2026-02-15T08:00:00Z",
+          "arrival": "2026-02-15T17:30:00Z",
+          "duration": "PT9H30M",
+          "segments": [
+            {
+              "id": "seg-bcn-mad",
+              "departure": "2026-02-15T08:00:00Z",
+              "arrival": "2026-02-15T10:45:00Z",
+              "origin": { "label": "Barcelona Sants" },
+              "destination": { "label": "Madrid Puerta de Atocha" },
+              "vehicle": { "reference": "AVE 3102" },
+              "marketingCarrier": "Renfe"
+            },
+            {
+              "id": "seg-mad-par",
+              "departure": "2026-02-15T12:15:00Z",
+              "arrival": "2026-02-15T17:30:00Z",
+              "origin": { "label": "Madrid Puerta de Atocha" },
+              "destination": { "label": "Paris Gare de Lyon" },
+              "vehicle": { "reference": "TGV 9714" },
+              "marketingCarrier": "SNCF"
+            }
+          ]
+        },
+        {
+          "id": "outbound-solution-2",
+          "departure": "2026-02-15T09:30:00Z",
+          "arrival": "2026-02-15T19:00:00Z",
+          "duration": "PT9H30M",
+          "segments": [
+            {
+              "id": "seg-bcn-mad-2",
+              "departure": "2026-02-15T09:30:00Z",
+              "arrival": "2026-02-15T12:15:00Z",
+              "origin": { "label": "Barcelona Sants" },
+              "destination": { "label": "Madrid Puerta de Atocha" },
+              "vehicle": { "reference": "IRYO 06180" },
+              "marketingCarrier": "IRYO"
+            },
+            {
+              "id": "seg-mad-par-2",
+              "departure": "2026-02-15T14:00:00Z",
+              "arrival": "2026-02-15T19:00:00Z",
+              "origin": { "label": "Madrid Puerta de Atocha" },
+              "destination": { "label": "Paris Gare de Lyon" },
+              "vehicle": { "reference": "TGV 9716" },
+              "marketingCarrier": "SNCF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "origin": { "label": "Paris Gare de Lyon" },
+      "destination": { "label": "Barcelona Sants" },
+      "departure": "2026-02-20T10:00:00Z",
+      "solutions": [
+        {
+          "id": "return-solution-1",
+          "departure": "2026-02-20T10:00:00Z",
+          "arrival": "2026-02-20T19:45:00Z",
+          "duration": "PT9H45M",
+          "segments": [
+            {
+              "id": "seg-par-mad-ret",
+              "departure": "2026-02-20T10:00:00Z",
+              "arrival": "2026-02-20T15:15:00Z",
+              "origin": { "label": "Paris Gare de Lyon" },
+              "destination": { "label": "Madrid Puerta de Atocha" },
+              "vehicle": { "reference": "TGV 9715" },
+              "marketingCarrier": "SNCF"
+            },
+            {
+              "id": "seg-mad-bcn-ret",
+              "departure": "2026-02-20T17:00:00Z",
+              "arrival": "2026-02-20T19:45:00Z",
+              "origin": { "label": "Madrid Puerta de Atocha" },
+              "destination": { "label": "Barcelona Sants" },
+              "vehicle": { "reference": "AVE 3215" },
+              "marketingCarrier": "Renfe"
+            }
+          ]
+        },
+        {
+          "id": "return-solution-2",
+          "departure": "2026-02-20T11:30:00Z",
+          "arrival": "2026-02-20T21:00:00Z",
+          "duration": "PT9H30M",
+          "segments": [
+            {
+              "id": "seg-par-mad-ret-2",
+              "departure": "2026-02-20T11:30:00Z",
+              "arrival": "2026-02-20T16:45:00Z",
+              "origin": { "label": "Paris Gare de Lyon" },
+              "destination": { "label": "Madrid Puerta de Atocha" },
+              "vehicle": { "reference": "TGV 9717" },
+              "marketingCarrier": "SNCF"
+            },
+            {
+              "id": "seg-mad-bcn-ret-2",
+              "departure": "2026-02-20T18:15:00Z",
+              "arrival": "2026-02-20T21:00:00Z",
+              "origin": { "label": "Madrid Puerta de Atocha" },
+              "destination": { "label": "Barcelona Sants" },
+              "vehicle": { "reference": "IRYO 06195" },
+              "marketingCarrier": "IRYO"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "offers": [
+    {
+      "id": "offer-bcn-mad-std-nonflex",
+      "legSolution": "outbound-solution-1",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Non-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 45.50, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-bcn-mad-std-semiflex",
+      "legSolution": "outbound-solution-1",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Semi-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 62.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-bcn-mad-comfort-nonflex",
+      "legSolution": "outbound-solution-1",
+      "comfortCategory": { "label": "Comfort" },
+      "flexibility": { "label": "Non-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 78.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-bcn-mad-comfort-semiflex",
+      "legSolution": "outbound-solution-1",
+      "comfortCategory": { "label": "Comfort" },
+      "flexibility": { "label": "Semi-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 95.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-bcn-mad-2-std-nonflex",
+      "legSolution": "outbound-solution-2",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Non-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 42.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-bcn-mad-2-std-semiflex",
+      "legSolution": "outbound-solution-2",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Semi-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 58.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-bcn-mad-2-comfort-nonflex",
+      "legSolution": "outbound-solution-2",
+      "comfortCategory": { "label": "Comfort" },
+      "flexibility": { "label": "Non-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 71.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-bcn-mad-2-comfort-semiflex",
+      "legSolution": "outbound-solution-2",
+      "comfortCategory": { "label": "Comfort" },
+      "flexibility": { "label": "Semi-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 88.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-return-std-nonflex",
+      "legSolution": "return-solution-1",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Non-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 48.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-return-std-semiflex",
+      "legSolution": "return-solution-1",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Semi-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 65.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-return-comfort-nonflex",
+      "legSolution": "return-solution-1",
+      "comfortCategory": { "label": "Comfort" },
+      "flexibility": { "label": "Non-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 82.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-return-comfort-semiflex",
+      "legSolution": "return-solution-1",
+      "comfortCategory": { "label": "Comfort" },
+      "flexibility": { "label": "Semi-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 99.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-return-2-std-nonflex",
+      "legSolution": "return-solution-2",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Non-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 44.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-return-2-std-semiflex",
+      "legSolution": "return-solution-2",
+      "comfortCategory": { "label": "Standard" },
+      "flexibility": { "label": "Semi-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 60.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-return-2-comfort-nonflex",
+      "legSolution": "return-solution-2",
+      "comfortCategory": { "label": "Comfort" },
+      "flexibility": { "label": "Non-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 76.00, "currency": "EUR" }
+          }
+        }
+      }
+    },
+    {
+      "id": "offer-return-2-comfort-semiflex",
+      "legSolution": "return-solution-2",
+      "comfortCategory": { "label": "Comfort" },
+      "flexibility": { "label": "Semi-Flexible" },
+      "prices": {
+        "selling": {
+          "sellingPrice": {
+            "amount": { "value": 92.00, "currency": "EUR" }
+          }
+        }
+      }
+    }
+  ]
+}
