@@ -1,0 +1,184 @@
+{
+    "search": {
+        "id": 999111222,
+        "currency": "EUR",
+        "outbound_leg": {
+            "results": [
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 1,
+                                        "name": "London St Pancras",
+                                        "iata_code": "QQS"
+                                    },
+                                    "finish_station": {
+                                        "id": 2,
+                                        "name": "Paris Nord",
+                                        "iata_code": "PNO"
+                                    },
+                                    "departure_time": "2026-06-15T08:01:00+01:00",
+                                    "arrival_time": "2026-06-15T11:17:00+02:00",
+                                    "train_name": "Eurostar",
+                                    "train_number": "9008"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 101,
+                                    "name": "Eurostar Standard, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5700
+                                    }
+                                },
+                                {
+                                    "id": 102,
+                                    "name": "Eurostar Standard, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7400
+                                    }
+                                },
+                                {
+                                    "id": 103,
+                                    "name": "Eurostar Plus, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 10900
+                                    }
+                                },
+                                {
+                                    "id": 104,
+                                    "name": "Eurostar Premier, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 24500
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 1,
+                                        "name": "London St Pancras",
+                                        "iata_code": "QQS"
+                                    },
+                                    "finish_station": {
+                                        "id": 2,
+                                        "name": "Paris Nord",
+                                        "iata_code": "PNO"
+                                    },
+                                    "departure_time": "2026-06-15T10:24:00+01:00",
+                                    "arrival_time": "2026-06-15T13:47:00+02:00",
+                                    "train_name": "Eurostar",
+                                    "train_number": "9018"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 201,
+                                    "name": "Eurostar Standard, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6400
+                                    }
+                                },
+                                {
+                                    "id": 202,
+                                    "name": "Eurostar Standard, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8900
+                                    }
+                                },
+                                {
+                                    "id": 203,
+                                    "name": "Eurostar Plus, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 12900
+                                    }
+                                },
+                                {
+                                    "id": 204,
+                                    "name": "Eurostar Premier, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 27500
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 1,
+                                        "name": "London St Pancras",
+                                        "iata_code": "QQS"
+                                    },
+                                    "finish_station": {
+                                        "id": 2,
+                                        "name": "Paris Nord",
+                                        "iata_code": "PNO"
+                                    },
+                                    "departure_time": "2026-06-15T18:01:00+01:00",
+                                    "arrival_time": "2026-06-15T21:17:00+02:00",
+                                    "train_name": "Eurostar",
+                                    "train_number": "9046"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 301,
+                                    "name": "Eurostar Standard, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 4400
+                                    }
+                                },
+                                {
+                                    "id": 302,
+                                    "name": "Eurostar Standard, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5900
+                                    }
+                                },
+                                {
+                                    "id": 303,
+                                    "name": "Eurostar Plus, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8900
+                                    }
+                                },
+                                {
+                                    "id": 404,
+                                    "name": "Eurostar Premier, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 22500
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

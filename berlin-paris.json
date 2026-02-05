@@ -1,0 +1,704 @@
+{
+    "search": {
+        "id": 140726,
+        "created_at": "2026-02-05T09:08:54.558+00:00",
+        "updated_at": "2026-02-05T09:08:58.289+00:00",
+        "completed_at": "2026-02-05T09:08:58.289+00:00",
+        "freshness": "fresh",
+        "currency": "USD",
+        "two_stage_search_required": false,
+        "error_code": null,
+        "outbound_leg": {
+            "results": [
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 8821,
+                                        "name": "Berlin Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221960,
+                                        "name": "Berlin",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 1359,
+                                        "name": "Erfurt Hbf",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T05:36:00.000+01:00",
+                                    "arrival_time": "2026-02-06T07:12:00.000+01:00",
+                                    "train_number": "1501",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 1359,
+                                        "name": "Erfurt Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 32045,
+                                        "name": "Frankfurt am Main Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221989,
+                                        "name": "Frankfurt am Main",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:30:00.000+01:00",
+                                    "arrival_time": "2026-02-06T09:44:00.000+01:00",
+                                    "train_number": "593",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 32045,
+                                        "name": "Frankfurt am Main Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221989,
+                                        "name": "Frankfurt am Main",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 17404,
+                                        "name": "Karlsruhe Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222260,
+                                        "name": "Karlsruhe",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T10:20:00.000+01:00",
+                                    "arrival_time": "2026-02-06T11:23:00.000+01:00",
+                                    "train_number": "71",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 17404,
+                                        "name": "Karlsruhe Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222260,
+                                        "name": "Karlsruhe",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 171136,
+                                        "name": "Paris Est",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T11:32:00.000+01:00",
+                                    "arrival_time": "2026-02-06T14:07:00.000+01:00",
+                                    "train_number": "9574",
+                                    "train_name": "TGV",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716767,
+                                    "name": "Super Sparpreis Europa, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 16050
+                                    }
+                                },
+                                {
+                                    "id": 3716768,
+                                    "name": "Super Sparpreis Europa, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17500
+                                    }
+                                },
+                                {
+                                    "id": 3716769,
+                                    "name": "Sparpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 18000
+                                    }
+                                },
+                                {
+                                    "id": 3716770,
+                                    "name": "Sparpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 19450
+                                    }
+                                },
+                                {
+                                    "id": 3716771,
+                                    "name": "Flexpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 29100
+                                    }
+                                },
+                                {
+                                    "id": 3716772,
+                                    "name": "Flexpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 49150
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 8821,
+                                        "name": "Berlin Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221960,
+                                        "name": "Berlin",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 171136,
+                                        "name": "Paris Est",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:06:00.000+01:00",
+                                    "arrival_time": "2026-02-06T14:51:00.000+01:00",
+                                    "train_number": "9590",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716773,
+                                    "name": "Super Sparpreis Europa, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 11700
+                                    }
+                                },
+                                {
+                                    "id": 3716774,
+                                    "name": "Super Sparpreis Europa, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 13550
+                                    }
+                                },
+                                {
+                                    "id": 3716775,
+                                    "name": "Sparpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 13700
+                                    }
+                                },
+                                {
+                                    "id": 3716776,
+                                    "name": "Sparpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 15550
+                                    }
+                                },
+                                {
+                                    "id": 3716777,
+                                    "name": "Flexpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 29100
+                                    }
+                                },
+                                {
+                                    "id": 3716778,
+                                    "name": "Flexpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 49150
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 9593,
+                                        "name": "Berlin Südkreuz",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221960,
+                                        "name": "Berlin",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 171136,
+                                        "name": "Paris Est",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:13:00.000+01:00",
+                                    "arrival_time": "2026-02-06T14:51:00.000+01:00",
+                                    "train_number": "9590",
+                                    "train_name": "ICE",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716779,
+                                    "name": "Tarif Full Flex Seconde, Standard, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 29100
+                                    }
+                                },
+                                {
+                                    "id": 3716780,
+                                    "name": "Tarif Full Flex Premiere, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 49150
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 8821,
+                                        "name": "Berlin Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221960,
+                                        "name": "Berlin",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 85617,
+                                        "name": "Mannheim Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222291,
+                                        "name": "Mannheim",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T08:31:00.000+01:00",
+                                    "arrival_time": "2026-02-06T13:29:00.000+01:00",
+                                    "train_number": "371",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 85617,
+                                        "name": "Mannheim Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222291,
+                                        "name": "Mannheim",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 171136,
+                                        "name": "Paris Est",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T13:42:00.000+01:00",
+                                    "arrival_time": "2026-02-06T16:50:00.000+01:00",
+                                    "train_number": "9552",
+                                    "train_name": "TGV",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716781,
+                                    "name": "Super Sparpreis Europa, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 12950
+                                    }
+                                },
+                                {
+                                    "id": 3716782,
+                                    "name": "Sparpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 14900
+                                    }
+                                },
+                                {
+                                    "id": 3716783,
+                                    "name": "Super Sparpreis Europa, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 15300
+                                    }
+                                },
+                                {
+                                    "id": 3716784,
+                                    "name": "Sparpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17250
+                                    }
+                                },
+                                {
+                                    "id": 3716785,
+                                    "name": "Flexpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 29100
+                                    }
+                                },
+                                {
+                                    "id": 3716786,
+                                    "name": "Flexpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 49150
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 8821,
+                                        "name": "Berlin Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221960,
+                                        "name": "Berlin",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 38912,
+                                        "name": "Hannover Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222251,
+                                        "name": "Hannover",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T10:01:00.000+01:00",
+                                    "arrival_time": "2026-02-06T11:37:00.000+01:00",
+                                    "train_number": "1044",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 38912,
+                                        "name": "Hannover Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222251,
+                                        "name": "Hannover",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 17404,
+                                        "name": "Karlsruhe Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222260,
+                                        "name": "Karlsruhe",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T11:53:00.000+01:00",
+                                    "arrival_time": "2026-02-06T15:23:00.000+01:00",
+                                    "train_number": "73",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 17404,
+                                        "name": "Karlsruhe Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222260,
+                                        "name": "Karlsruhe",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 171136,
+                                        "name": "Paris Est",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T15:32:00.000+01:00",
+                                    "arrival_time": "2026-02-06T18:16:00.000+01:00",
+                                    "train_number": "9572",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716787,
+                                    "name": "Super Sparpreis Europa, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 11700
+                                    }
+                                },
+                                {
+                                    "id": 3716788,
+                                    "name": "Sparpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 13700
+                                    }
+                                },
+                                {
+                                    "id": 3716789,
+                                    "name": "Super Sparpreis Europa, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 13800
+                                    }
+                                },
+                                {
+                                    "id": 3716790,
+                                    "name": "Sparpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 15800
+                                    }
+                                },
+                                {
+                                    "id": 3716791,
+                                    "name": "Flexpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 29100
+                                    }
+                                },
+                                {
+                                    "id": 3716792,
+                                    "name": "Flexpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 49150
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 8821,
+                                        "name": "Berlin Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221960,
+                                        "name": "Berlin",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 85615,
+                                        "name": "Köln Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222000,
+                                        "name": "Köln",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T11:41:00.000+01:00",
+                                    "arrival_time": "2026-02-06T15:40:00.000+01:00",
+                                    "train_number": "1156",
+                                    "train_name": "ICE",
+                                    "train_code": "intercity_express"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716793,
+                                    "name": "Super Sparpreis, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 3450
+                                    }
+                                },
+                                {
+                                    "id": 3716794,
+                                    "name": "Sparpreis, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4350
+                                    }
+                                },
+                                {
+                                    "id": 3716795,
+                                    "name": "Super Sparpreis, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4700
+                                    }
+                                },
+                                {
+                                    "id": 3716796,
+                                    "name": "Sparpreis, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 5800
+                                    }
+                                },
+                                {
+                                    "id": 3716797,
+                                    "name": "Flexpreis, Standard, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 20500
+                                    }
+                                },
+                                {
+                                    "id": 3716798,
+                                    "name": "Flexpreis, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 37950
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 85615,
+                                        "name": "Köln Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222000,
+                                        "name": "Köln",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 171137,
+                                        "name": "Paris Nord",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T16:43:00.000+01:00",
+                                    "arrival_time": "2026-02-06T20:12:00.000+01:00",
+                                    "train_number": "9474",
+                                    "train_name": "Eurostar",
+                                    "train_code": "ER"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716799,
+                                    "name": "Eurostar Standard, Eurostar Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4350
+                                    }
+                                },
+                                {
+                                    "id": 3716800,
+                                    "name": "Eurostar Plus, Eurostar Plus, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 9750
+                                    }
+                                },
+                                {
+                                    "id": 3716801,
+                                    "name": "Eurostar Premier, Eurostar Premier, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17150
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "inbound_leg": null
+    }
+}

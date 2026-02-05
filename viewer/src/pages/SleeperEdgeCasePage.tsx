@@ -447,8 +447,8 @@ function SleeperSolutionCard({ solution }: SleeperSolutionCardProps) {
                             <span
                                 key={idx}
                                 className={`rounded-full px-3 py-1 text-xs font-medium ${conn.train_name.toLowerCase().includes('night')
-                                        ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
-                                        : 'bg-slate-700/50 text-slate-300'
+                                    ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
+                                    : 'bg-slate-700/50 text-slate-300'
                                     }`}
                             >
                                 {conn.train_name} {conn.train_number}
@@ -504,8 +504,8 @@ function SleeperSolutionCard({ solution }: SleeperSolutionCardProps) {
                                             key={tariff}
                                             onClick={() => setDayTrainTariff(dayTrainTariff === tariff ? null : tariff)}
                                             className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${dayTrainTariff === tariff
-                                                    ? 'bg-pink-600 text-white'
-                                                    : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
+                                                ? 'bg-pink-600 text-white'
+                                                : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
                                                 }`}
                                         >
                                             {tariff}
@@ -524,8 +524,8 @@ function SleeperSolutionCard({ solution }: SleeperSolutionCardProps) {
                                                 key={flex}
                                                 onClick={() => setDayTrainFlexibility(dayTrainFlexibility === flex ? null : flex)}
                                                 className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${dayTrainFlexibility === flex
-                                                        ? 'bg-pink-600 text-white'
-                                                        : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
+                                                    ? 'bg-pink-600 text-white'
+                                                    : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
                                                     }`}
                                             >
                                                 {flex}
@@ -564,8 +564,8 @@ function SleeperSolutionCard({ solution }: SleeperSolutionCardProps) {
                                             setSelectedFlexibility(null);
                                         }}
                                         className={`rounded-xl p-4 text-left transition-all ${selectedAccommodationCategory === cat.id
-                                                ? 'bg-purple-600 text-white ring-2 ring-purple-400'
-                                                : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
+                                            ? 'bg-purple-600 text-white ring-2 ring-purple-400'
+                                            : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
                                             }`}
                                     >
                                         <div className="flex items-center gap-2 mb-1">
@@ -596,8 +596,8 @@ function SleeperSolutionCard({ solution }: SleeperSolutionCardProps) {
                                                     setSelectedFlexibility(null);
                                                 }}
                                                 className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all ${selectedAccommodationType === type
-                                                        ? 'bg-purple-600 text-white'
-                                                        : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
+                                                    ? 'bg-purple-600 text-white'
+                                                    : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
                                                     }`}
                                             >
                                                 {isLadiesOnly && <User className="h-3 w-3 text-pink-400" />}
@@ -625,8 +625,8 @@ function SleeperSolutionCard({ solution }: SleeperSolutionCardProps) {
                                                 setSelectedFlexibility(null);
                                             }}
                                             className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${selectedTariff === tariff
-                                                    ? 'bg-purple-600 text-white'
-                                                    : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
+                                                ? 'bg-purple-600 text-white'
+                                                : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
                                                 }`}
                                         >
                                             {tariff}
@@ -648,8 +648,8 @@ function SleeperSolutionCard({ solution }: SleeperSolutionCardProps) {
                                             key={flex}
                                             onClick={() => setSelectedFlexibility(flex)}
                                             className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${selectedFlexibility === flex
-                                                    ? 'bg-purple-600 text-white'
-                                                    : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
+                                                ? 'bg-purple-600 text-white'
+                                                : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
                                                 }`}
                                         >
                                             {flex}

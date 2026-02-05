@@ -1,0 +1,657 @@
+{
+    "search": {
+        "id": 329749629,
+        "created_at": "2026-02-04T21:43:17.380+00:00",
+        "updated_at": "2026-02-04T21:43:19.446+00:00",
+        "completed_at": "2026-02-04T21:43:19.446+00:00",
+        "freshness": "fresh",
+        "currency": "EUR",
+        "two_stage_search_required": false,
+        "error_code": null,
+        "outbound_leg": {
+            "results": [
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 51840,
+                                        "name": "Paris Lyon",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 6,
+                                        "name": "Basel SBB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221979,
+                                        "name": "Basel",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:22:00.000+01:00",
+                                    "arrival_time": "2026-02-06T10:26:00.000+01:00",
+                                    "train_number": "9203",
+                                    "train_name": "Lyria",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921790,
+                                    "name": "Semi Flex Standard, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 12200
+                                    }
+                                },
+                                {
+                                    "id": 8164921794,
+                                    "name": "Semi Flex Première, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13300
+                                    }
+                                },
+                                {
+                                    "id": 8164921796,
+                                    "name": "Flex Standard, Standard, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 15700
+                                    }
+                                },
+                                {
+                                    "id": 8164921800,
+                                    "name": "Flex Première Signature, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 23500
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 6,
+                                        "name": "Basel SBB",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221979,
+                                        "name": "Basel",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 207223,
+                                        "name": "Zürich HB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222056,
+                                        "name": "Zürich",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T12:07:00.000+01:00",
+                                    "arrival_time": "2026-02-06T13:00:00.000+01:00",
+                                    "train_number": "277",
+                                    "train_name": "InterCityExpress",
+                                    "train_code": "InterCityExpress"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921804,
+                                    "name": "Supersaver Ticket, Second, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 2700
+                                    }
+                                },
+                                {
+                                    "id": 8164921806,
+                                    "name": "Point-to-point Ticket, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 4100
+                                    }
+                                },
+                                {
+                                    "id": 8164921807,
+                                    "name": "Point-to-point Ticket, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7100
+                                    }
+                                },
+                                {
+                                    "id": 8164921808,
+                                    "name": "Point-to-point Ticket, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8200
+                                    }
+                                },
+                                {
+                                    "id": 8164921810,
+                                    "name": "Saver Day Pass, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13550
+                                    }
+                                },
+                                {
+                                    "id": 8164921811,
+                                    "name": "Point-to-point Ticket, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 14150
+                                    }
+                                },
+                                {
+                                    "id": 8164921812,
+                                    "name": "Saver Day Pass, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 22650
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 51840,
+                                        "name": "Paris Lyon",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 207223,
+                                        "name": "Zürich HB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222056,
+                                        "name": "Zürich",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:22:00.000+01:00",
+                                    "arrival_time": "2026-02-06T11:26:00.000+01:00",
+                                    "train_number": "9203",
+                                    "train_name": "Lyria",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921814,
+                                    "name": "Semi Flex Standard, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13100
+                                    }
+                                },
+                                {
+                                    "id": 8164921816,
+                                    "name": "Semi Flex Première, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 14600
+                                    }
+                                },
+                                {
+                                    "id": 8164921818,
+                                    "name": "Flex Standard, Standard, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 17100
+                                    }
+                                },
+                                {
+                                    "id": 8164921819,
+                                    "name": "Flex Première Signature, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 24000
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 171136,
+                                        "name": "Paris Est",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 6922,
+                                        "name": "Strasbourg",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222355,
+                                        "name": "Strasbourg",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:58:00.000+01:00",
+                                    "arrival_time": "2026-02-06T09:59:00.000+01:00",
+                                    "train_number": "2407",
+                                    "train_name": "TGV INOUI",
+                                    "train_code": "sncf"
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 6922,
+                                        "name": "Strasbourg",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222355,
+                                        "name": "Strasbourg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 6,
+                                        "name": "Basel SBB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221979,
+                                        "name": "Basel",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T10:21:00.000+01:00",
+                                    "arrival_time": "2026-02-06T11:38:00.000+01:00",
+                                    "train_number": "096249",
+                                    "train_name": "TRAIN TER",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921822,
+                                    "name": "Tarif Standard Seconde, Standard, Semi-Flexible | Tarif Normal, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 15500
+                                    }
+                                },
+                                {
+                                    "id": 8164921823,
+                                    "name": "Tarif Optimum, First, Fully-Flexible | Tarif Normal, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 22300
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 6,
+                                        "name": "Basel SBB",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 221979,
+                                        "name": "Basel",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 207223,
+                                        "name": "Zürich HB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222056,
+                                        "name": "Zürich",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T12:07:00.000+01:00",
+                                    "arrival_time": "2026-02-06T13:00:00.000+01:00",
+                                    "train_number": "277",
+                                    "train_name": "InterCityExpress",
+                                    "train_code": "InterCityExpress"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921828,
+                                    "name": "Supersaver Ticket, Second, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 2700
+                                    }
+                                },
+                                {
+                                    "id": 8164921830,
+                                    "name": "Point-to-point Ticket, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 4100
+                                    }
+                                },
+                                {
+                                    "id": 8164921832,
+                                    "name": "Point-to-point Ticket, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7100
+                                    }
+                                },
+                                {
+                                    "id": 8164921834,
+                                    "name": "Point-to-point Ticket, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8200
+                                    }
+                                },
+                                {
+                                    "id": 8164921836,
+                                    "name": "Saver Day Pass, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13550
+                                    }
+                                },
+                                {
+                                    "id": 8164921838,
+                                    "name": "Point-to-point Ticket, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 14150
+                                    }
+                                },
+                                {
+                                    "id": 8164921840,
+                                    "name": "Saver Day Pass, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 22650
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 51840,
+                                        "name": "Paris Lyon",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 207223,
+                                        "name": "Zürich HB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222056,
+                                        "name": "Zürich",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T10:22:00.000+01:00",
+                                    "arrival_time": "2026-02-06T14:26:00.000+01:00",
+                                    "train_number": "9211",
+                                    "train_name": "Lyria",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921844,
+                                    "name": "Semi Flex Standard, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13100
+                                    }
+                                },
+                                {
+                                    "id": 8164921846,
+                                    "name": "Semi Flex Première, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 14600
+                                    }
+                                },
+                                {
+                                    "id": 8164921849,
+                                    "name": "Flex Standard, Standard, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 17100
+                                    }
+                                },
+                                {
+                                    "id": 8164921852,
+                                    "name": "Flex Première Signature, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 24000
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 51840,
+                                        "name": "Paris Lyon",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 207223,
+                                        "name": "Zürich HB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222056,
+                                        "name": "Zürich",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T12:22:00.000+01:00",
+                                    "arrival_time": "2026-02-06T16:26:00.000+01:00",
+                                    "train_number": "9213",
+                                    "train_name": "Lyria",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921856,
+                                    "name": "Semi Flex Standard, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 14700
+                                    }
+                                },
+                                {
+                                    "id": 8164921859,
+                                    "name": "Flex Standard, Standard, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 18700
+                                    }
+                                },
+                                {
+                                    "id": 8164921862,
+                                    "name": "Semi Flex Première, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 23900
+                                    }
+                                },
+                                {
+                                    "id": 8164921865,
+                                    "name": "Flex Première Signature, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 26000
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 51840,
+                                        "name": "Paris Lyon",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 207223,
+                                        "name": "Zürich HB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222056,
+                                        "name": "Zürich",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T16:22:00.000+01:00",
+                                    "arrival_time": "2026-02-06T20:26:00.000+01:00",
+                                    "train_number": "9219",
+                                    "train_name": "Lyria",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921867,
+                                    "name": "Semi Flex Première, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 23900
+                                    }
+                                },
+                                {
+                                    "id": 8164921870,
+                                    "name": "Flex Première Signature, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 26000
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 51840,
+                                        "name": "Paris Lyon",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 207223,
+                                        "name": "Zürich HB",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222056,
+                                        "name": "Zürich",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T18:21:00.000+01:00",
+                                    "arrival_time": "2026-02-06T22:26:00.000+01:00",
+                                    "train_number": "9223",
+                                    "train_name": "Lyria",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164921874,
+                                    "name": "Semi Flex Première, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 21900
+                                    }
+                                },
+                                {
+                                    "id": 8164921877,
+                                    "name": "Flex Première Signature, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 24000
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "inbound_leg": null
+    }
+}

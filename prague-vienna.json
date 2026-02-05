@@ -1,0 +1,584 @@
+{
+    "search": {
+        "id": 140725,
+        "created_at": "2026-02-05T09:06:22.022+00:00",
+        "updated_at": "2026-02-05T09:06:24.163+00:00",
+        "completed_at": "2026-02-05T09:06:24.163+00:00",
+        "freshness": "fresh",
+        "currency": "USD",
+        "two_stage_search_required": false,
+        "error_code": null,
+        "outbound_leg": {
+            "results": [
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 85618,
+                                        "name": "Praha hl.n",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222030,
+                                        "name": "Praha",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 222095,
+                                        "name": "Wien Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222032,
+                                        "name": "Wien",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T06:37:00.000+01:00",
+                                    "arrival_time": "2026-02-06T10:49:00.000+01:00",
+                                    "train_number": "53",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716726,
+                                    "name": "Sparschiene, Second, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 3450
+                                    }
+                                },
+                                {
+                                    "id": 3716727,
+                                    "name": "Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4150
+                                    }
+                                },
+                                {
+                                    "id": 3716728,
+                                    "name": "Sparschiene Komfort, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4750
+                                    }
+                                },
+                                {
+                                    "id": 3716729,
+                                    "name": "Sparschiene Komfort, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 5900
+                                    }
+                                },
+                                {
+                                    "id": 3716730,
+                                    "name": "Sparschiene, Business, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4150
+                                    }
+                                },
+                                {
+                                    "id": 3716731,
+                                    "name": "Sparschiene Komfort, Business, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 5900
+                                    }
+                                },
+                                {
+                                    "id": 3716732,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 11100
+                                    }
+                                },
+                                {
+                                    "id": 3716733,
+                                    "name": "Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                },
+                                {
+                                    "id": 3716734,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 85618,
+                                        "name": "Praha hl.n",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222030,
+                                        "name": "Praha",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 44374,
+                                        "name": "Breclav",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222216,
+                                        "name": "Breclav",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:37:00.000+01:00",
+                                    "arrival_time": "2026-02-06T10:47:00.000+01:00",
+                                    "train_number": "275",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 44374,
+                                        "name": "Breclav",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222216,
+                                        "name": "Breclav",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 222095,
+                                        "name": "Wien Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222032,
+                                        "name": "Wien",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T10:55:00.000+01:00",
+                                    "arrival_time": "2026-02-06T11:49:00.000+01:00",
+                                    "train_number": "203",
+                                    "train_name": "Eurocity",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716735,
+                                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 2350
+                                    }
+                                },
+                                {
+                                    "id": 3716736,
+                                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene, Second, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 1800
+                                    }
+                                },
+                                {
+                                    "id": 3716737,
+                                    "name": "Sparschiene, First, Non-Flexible | Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 3000
+                                    }
+                                },
+                                {
+                                    "id": 3716738,
+                                    "name": "Sparschiene Komfort, First, Semi-Flexible | Sparschiene Komfort, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4150
+                                    }
+                                },
+                                {
+                                    "id": 3716739,
+                                    "name": "Sparschiene, Business, Non-Flexible | Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 3000
+                                    }
+                                },
+                                {
+                                    "id": 3716740,
+                                    "name": "Sparschiene Komfort, Business, Semi-Flexible | Sparschiene Komfort, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4150
+                                    }
+                                },
+                                {
+                                    "id": 3716741,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 11100
+                                    }
+                                },
+                                {
+                                    "id": 3716742,
+                                    "name": "Standard-Ticket, First, Fully-Flexible | Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                },
+                                {
+                                    "id": 3716743,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible | Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 85618,
+                                        "name": "Praha hl.n",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222030,
+                                        "name": "Praha",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 222095,
+                                        "name": "Wien Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222032,
+                                        "name": "Wien",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T08:37:00.000+01:00",
+                                    "arrival_time": "2026-02-06T12:49:00.000+01:00",
+                                    "train_number": "55",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716744,
+                                    "name": "Sparschiene, Second, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4750
+                                    }
+                                },
+                                {
+                                    "id": 3716745,
+                                    "name": "Sparschiene Komfort, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 6500
+                                    }
+                                },
+                                {
+                                    "id": 3716746,
+                                    "name": "Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 6550
+                                    }
+                                },
+                                {
+                                    "id": 3716747,
+                                    "name": "Sparschiene Komfort, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 8900
+                                    }
+                                },
+                                {
+                                    "id": 3716748,
+                                    "name": "Sparschiene, Business, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 6550
+                                    }
+                                },
+                                {
+                                    "id": 3716749,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 11100
+                                    }
+                                },
+                                {
+                                    "id": 3716750,
+                                    "name": "Sparschiene Komfort, Business, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 8900
+                                    }
+                                },
+                                {
+                                    "id": 3716751,
+                                    "name": "Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                },
+                                {
+                                    "id": 3716752,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 85618,
+                                        "name": "Praha hl.n",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222030,
+                                        "name": "Praha",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 44374,
+                                        "name": "Breclav",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222216,
+                                        "name": "Breclav",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T09:37:00.000+01:00",
+                                    "arrival_time": "2026-02-06T12:47:00.000+01:00",
+                                    "train_number": "277",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 44374,
+                                        "name": "Breclav",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222216,
+                                        "name": "Breclav",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 222095,
+                                        "name": "Wien Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222032,
+                                        "name": "Wien",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T12:55:00.000+01:00",
+                                    "arrival_time": "2026-02-06T13:49:00.000+01:00",
+                                    "train_number": "103",
+                                    "train_name": "Eurocity",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716753,
+                                    "name": "Sparschiene, Second, Non-Flexible | Sparschiene, Second, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 2600
+                                    }
+                                },
+                                {
+                                    "id": 3716754,
+                                    "name": "Sparschiene Komfort, Second, Semi-Flexible | Sparschiene Komfort, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 3550
+                                    }
+                                },
+                                {
+                                    "id": 3716755,
+                                    "name": "Sparschiene, First, Non-Flexible | Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 3550
+                                    }
+                                },
+                                {
+                                    "id": 3716756,
+                                    "name": "Sparschiene Komfort, First, Semi-Flexible | Sparschiene Komfort, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4750
+                                    }
+                                },
+                                {
+                                    "id": 3716757,
+                                    "name": "Sparschiene, Business, Non-Flexible | Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 3550
+                                    }
+                                },
+                                {
+                                    "id": 3716758,
+                                    "name": "Sparschiene Komfort, Business, Semi-Flexible | Sparschiene Komfort, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 4750
+                                    }
+                                },
+                                {
+                                    "id": 3716759,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 11100
+                                    }
+                                },
+                                {
+                                    "id": 3716760,
+                                    "name": "Standard-Ticket, First, Fully-Flexible | Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                },
+                                {
+                                    "id": 3716761,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible | Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 46444,
+                                        "name": "Praha-Holesovice",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222030,
+                                        "name": "Praha",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 222095,
+                                        "name": "Wien Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222032,
+                                        "name": "Wien",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T10:36:00.000+01:00",
+                                    "arrival_time": "2026-02-06T14:49:00.000+01:00",
+                                    "train_number": "251",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 3716762,
+                                    "name": "Sparschiene, Second, Non-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 5250
+                                    }
+                                },
+                                {
+                                    "id": 3716763,
+                                    "name": "Sparschiene Komfort, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 7000
+                                    }
+                                },
+                                {
+                                    "id": 3716764,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 11100
+                                    }
+                                },
+                                {
+                                    "id": 3716765,
+                                    "name": "Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                },
+                                {
+                                    "id": 3716766,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "USD",
+                                        "cents": 17650
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "inbound_leg": null
+    }
+}

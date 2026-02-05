@@ -42,9 +42,32 @@ export interface FormattedOffer {
     price: number;
     currency: string;
     comfort: string;
-    flexibility: string; // e.g., 'Semiflex', 'Nonflex'
-    provider: string; // 'Iryo', 'Renfe', etc. inferred
-    segmentId?: string; // Reference to which segment this offer belongs to
+    flexibility: string;
+    provider: string;
+    segmentId?: string;
+    rawName?: string;
+
+    // === COMPREHENSIVE NORMALIZED FIELDS ===
+    // Commercial layer
+    tariffName?: string;           // "Sparschiene", "Inicial", "Serenita"
+    tariffTier?: 'saver' | 'standard' | 'premium' | 'flexible';
+
+    // Service class (normalized across all carriers)
+    serviceClass?: 'Economy' | 'Standard' | 'First' | 'Business' | 'Premium';
+
+    // Accommodation
+    accommodationCategory?: 'Seat' | 'Couchette' | 'Sleeper';
+
+    // Special zones
+    zone?: string | null;          // "Silent Area", "Family Zone", "Salotto Lounge"
+
+    // Amenities
+    amenities?: string[];          // ["Reservation", "Large Suitcase", "Bistro", "Meal"]
+
+    // Flags
+    isNightTrain?: boolean;
+    isLadiesOnly?: boolean;
+    isReserved?: boolean;
 }
 
 // Helper to parse duration PT2H30M to minutes
@@ -86,7 +109,7 @@ export function processData(): SimplifiedLeg[] {
             // Segments with per-segment offers
             const segments = sol.segments.map((seg: any, segIndex: number) => {
                 const carrier = seg.marketingCarrier || 'Unknown';
-                
+
                 // Generate demo offers for each segment (in real API, these would come per-segment)
                 // For demo: distribute offers across segments or generate unique ones
                 const segmentOffers: FormattedOffer[] = rawOffers.map((rawOffer: any) => {
@@ -96,8 +119,8 @@ export function processData(): SimplifiedLeg[] {
                     if (!priceObj) return null;
 
                     // For multi-segment, adjust price to be per-segment (demo logic)
-                    const pricePerSegment = sol.segments.length > 1 
-                        ? priceObj.value / sol.segments.length 
+                    const pricePerSegment = sol.segments.length > 1
+                        ? priceObj.value / sol.segments.length
                         : priceObj.value;
 
                     return {
@@ -136,7 +159,7 @@ export function processData(): SimplifiedLeg[] {
 
             // Create aggregate offers for the solution (sum of segment offers with same class/flex)
             const aggregateOffersMap = new Map<string, FormattedOffer>();
-            
+
             segments.forEach(seg => {
                 seg.offers.forEach(offer => {
                     const key = `${offer.comfort}-${offer.flexibility}`;

@@ -1,0 +1,139 @@
+{
+    "search": {
+        "id": 329749470,
+        "created_at": "2026-02-04T21:41:26.527+00:00",
+        "updated_at": "2026-02-04T21:41:26.986+00:00",
+        "completed_at": "2026-02-04T21:41:26.986+00:00",
+        "freshness": "fresh",
+        "currency": "EUR",
+        "two_stage_search_required": false,
+        "error_code": null,
+        "outbound_leg": {
+            "results": [
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 51840,
+                                        "name": "Paris Lyon",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 14825,
+                                        "name": "Barcelona Sants",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222062,
+                                        "name": "Barcelona",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:42:00.000+01:00",
+                                    "arrival_time": "2026-02-06T14:32:00.000+01:00",
+                                    "train_number": "9713",
+                                    "train_name": "TGV INOUI",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164902347,
+                                    "name": "Essential, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 11900
+                                    }
+                                },
+                                {
+                                    "id": 8164902348,
+                                    "name": "Essential, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 14100
+                                    }
+                                },
+                                {
+                                    "id": 8164902349,
+                                    "name": "Flexible, Standard, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 25900
+                                    }
+                                },
+                                {
+                                    "id": 8164902351,
+                                    "name": "Flexible, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 27900
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 51840,
+                                        "name": "Paris Lyon",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222035,
+                                        "name": "Paris",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 14825,
+                                        "name": "Barcelona Sants",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222062,
+                                        "name": "Barcelona",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T14:42:00.000+01:00",
+                                    "arrival_time": "2026-02-06T21:32:00.000+01:00",
+                                    "train_number": "9715",
+                                    "train_name": "TGV INOUI",
+                                    "train_code": "sncf"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164902353,
+                                    "name": "Essential, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 12900
+                                    }
+                                },
+                                {
+                                    "id": 8164902354,
+                                    "name": "Flexible, Standard, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 25900
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "inbound_leg": null
+    }
+}

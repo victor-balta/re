@@ -1,0 +1,447 @@
+{
+    "search": {
+        "id": 329749113,
+        "created_at": "2026-02-04T21:37:17.770+00:00",
+        "updated_at": "2026-02-04T21:37:23.156+00:00",
+        "completed_at": "2026-02-04T21:37:23.156+00:00",
+        "freshness": "fresh",
+        "currency": "EUR",
+        "two_stage_search_required": false,
+        "error_code": null,
+        "outbound_leg": {
+            "results": [
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 14825,
+                                        "name": "Barcelona Sants",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222062,
+                                        "name": "Barcelona",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 2391,
+                                        "name": "Madrid-Puerta De Atocha",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222064,
+                                        "name": "Madrid",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T05:45:00.000+01:00",
+                                    "arrival_time": "2026-02-06T09:02:00.000+01:00",
+                                    "train_number": "06060",
+                                    "train_name": "Iryo",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164885840,
+                                    "name": "Inicial, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6304
+                                    }
+                                },
+                                {
+                                    "id": 8164885841,
+                                    "name": "Inicial Superior, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7104
+                                    }
+                                },
+                                {
+                                    "id": 8164885842,
+                                    "name": "Infinita, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7561
+                                    }
+                                },
+                                {
+                                    "id": 8164885843,
+                                    "name": "Infinita + Large suitcase, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7561
+                                    }
+                                },
+                                {
+                                    "id": 8164885844,
+                                    "name": "Inicial Superior + Large suitcase, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8104
+                                    }
+                                },
+                                {
+                                    "id": 8164885845,
+                                    "name": "Infinita Bistró, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9556
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 14825,
+                                        "name": "Barcelona Sants",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222062,
+                                        "name": "Barcelona",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 2391,
+                                        "name": "Madrid-Puerta De Atocha",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222064,
+                                        "name": "Madrid",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T05:50:00.000+01:00",
+                                    "arrival_time": "2026-02-06T09:40:00.000+01:00",
+                                    "train_number": "3862",
+                                    "train_name": "AVE",
+                                    "train_code": "ave"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164885846,
+                                    "name": "Básico, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 2965
+                                    }
+                                },
+                                {
+                                    "id": 8164885847,
+                                    "name": "Elige, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 3560
+                                    }
+                                },
+                                {
+                                    "id": 8164885848,
+                                    "name": "Elige, Comfort, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 3945
+                                    }
+                                },
+                                {
+                                    "id": 8164885849,
+                                    "name": "Prémium, Comfort, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5845
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 14825,
+                                        "name": "Barcelona Sants",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222062,
+                                        "name": "Barcelona",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 2391,
+                                        "name": "Madrid-Puerta De Atocha",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222064,
+                                        "name": "Madrid",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T06:35:00.000+01:00",
+                                    "arrival_time": "2026-02-06T09:52:00.000+01:00",
+                                    "train_number": "3302",
+                                    "train_name": "AVE",
+                                    "train_code": "ave"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164885850,
+                                    "name": "Elige, Comfort, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 4730
+                                    }
+                                },
+                                {
+                                    "id": 8164885851,
+                                    "name": "Prémium, Comfort, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6630
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 14825,
+                                        "name": "Barcelona Sants",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222062,
+                                        "name": "Barcelona",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 2391,
+                                        "name": "Madrid-Puerta De Atocha",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222064,
+                                        "name": "Madrid",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:05:00.000+01:00",
+                                    "arrival_time": "2026-02-06T10:07:00.000+01:00",
+                                    "train_number": "06070",
+                                    "train_name": "Iryo",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164885852,
+                                    "name": "Inicial, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6157
+                                    }
+                                },
+                                {
+                                    "id": 8164885853,
+                                    "name": "Inicial Superior, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6957
+                                    }
+                                },
+                                {
+                                    "id": 8164885854,
+                                    "name": "Infinita, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7480
+                                    }
+                                },
+                                {
+                                    "id": 8164885855,
+                                    "name": "Infinita + Large suitcase, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7480
+                                    }
+                                },
+                                {
+                                    "id": 8164885856,
+                                    "name": "Inicial Superior + Large suitcase, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7957
+                                    }
+                                },
+                                {
+                                    "id": 8164885857,
+                                    "name": "Infinita Bistró, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9433
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 14825,
+                                        "name": "Barcelona Sants",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222062,
+                                        "name": "Barcelona",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 2391,
+                                        "name": "Madrid-Puerta De Atocha",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222064,
+                                        "name": "Madrid",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:27:00.000+01:00",
+                                    "arrival_time": "2026-02-06T10:37:00.000+01:00",
+                                    "train_number": "3662",
+                                    "train_name": "AVE",
+                                    "train_code": "ave"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164885858,
+                                    "name": "Básico, Standard, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 4195
+                                    }
+                                },
+                                {
+                                    "id": 8164885859,
+                                    "name": "Elige, Comfort, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 4650
+                                    }
+                                },
+                                {
+                                    "id": 8164885860,
+                                    "name": "Elige, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5595
+                                    }
+                                },
+                                {
+                                    "id": 8164885861,
+                                    "name": "Prémium, Comfort, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6550
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 14825,
+                                        "name": "Barcelona Sants",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222062,
+                                        "name": "Barcelona",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 2391,
+                                        "name": "Madrid-Puerta De Atocha",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222064,
+                                        "name": "Madrid",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-02-06T07:35:00.000+01:00",
+                                    "arrival_time": "2026-02-06T11:05:00.000+01:00",
+                                    "train_number": "06410",
+                                    "train_name": "OUIGO ESP",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8164885863,
+                                    "name": "OUIGO Esencial, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 2500
+                                    }
+                                },
+                                {
+                                    "id": 8164885864,
+                                    "name": "OUIGO Plus, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 3100
+                                    }
+                                },
+                                {
+                                    "id": 8164885865,
+                                    "name": "OUIGO Esencial Flex, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 3200
+                                    }
+                                },
+                                {
+                                    "id": 8164885866,
+                                    "name": "OUIGO Plus Flex, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 3800
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "inbound_leg": null
+    }
+}
