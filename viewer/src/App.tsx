@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SolutionCard } from './components/SolutionCard';
-import { ArrowRight, Train, Calendar, AlertTriangle, CloudRain, Info } from 'lucide-react';
+import { ArrowRight, Train, Calendar, AlertTriangle, CloudRain, Info, HelpCircle, TrendingUp } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import { SimplifiedLeg, SimplifiedSolution, SimplifiedSegment, FormattedOffer as BaseFormattedOffer } from './utils/data-processor';
 
@@ -563,55 +563,103 @@ export default function App() {
 
                     {/* Right: Cart Sidebar */}
                     <div className="lg:w-80 xl:w-96">
-                        <div className="sticky top-24 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-                            <h2 className="text-lg font-bold text-slate-900">Total to pay</h2>
-                            <div className="mt-4 flex items-baseline justify-between">
-                                <span className="text-3xl font-bold tracking-tight">€{(grandTotal + bookingFee).toFixed(2)}</span>
+                        <div className="sticky top-24 space-y-4">
+                            {/* Urgency Aside - Discrete Card Above Summary */}
+                            <div className="rounded-xl border border-amber-200 bg-amber-50 shadow-sm p-4 flex gap-3 items-start">
+                                <div className="p-2 bg-white rounded-lg shadow-sm border border-amber-100 shrink-0">
+                                    <TrendingUp className="w-4 h-4 text-amber-600" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm font-bold text-amber-900">Prices are likely to rise</h4>
+                                    <p className="text-xs text-amber-700 mt-0.5 leading-relaxed">
+                                        Data shows fares for this route tend to increase soon.
+                                    </p>
+                                </div>
                             </div>
-                            <div className="mt-2 text-sm text-slate-500 border-b border-slate-100 pb-4 mb-4">
-                                Includes booking fee: €{bookingFee.toFixed(2)}
-                            </div>
 
-                            <button
-                                disabled={!hasAnyCompleteSelection}
-                                className={`w-full rounded-lg py-3.5 font-semibold transition-all shadow-sm ${hasAnyCompleteSelection
-                                    ? 'bg-pink-600 text-white hover:bg-pink-700 hover:shadow transform active:scale-[0.98]'
-                                    : 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                                    }`}
-                            >
-                                Continue to Checkout →
-                            </button>
-
-                            <div className="mt-6 space-y-4">
-                                {data.map((leg, idx) => {
-                                    const selection = cartSelections[`leg-${idx}`];
-                                    const legLabel = legLabels[idx];
-
-                                    return (
-                                        <div key={leg.id} className="relative pl-4 border-l-2 border-slate-100 hover:border-slate-300 transition-colors py-1">
-                                            <div className="flex items-center justify-between mb-1">
-                                                <h3 className="text-sm font-bold text-slate-700">
-                                                    {leg.origin.split(' ')[0]} → {leg.destination.split(' ')[0]}
-                                                </h3>
-                                                {selection?.hasCompleteSelection && (
-                                                    <span className="text-sm font-bold text-pink-600">
-                                                        €{selection.totalPrice?.toFixed(2)}
-                                                    </span>
-                                                )}
-                                            </div>
-                                            <div className="text-xs text-slate-500">
-                                                {format(parseISO(leg.date), 'EEE d MMM')}
-                                            </div>
-                                            {!selection?.hasCompleteSelection && (
-                                                <div className="mt-1 text-xs text-amber-600 font-medium">
-                                                    Select options...
-                                                </div>
-                                            )}
+                            {/* Summary Card */}
+                            <div className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+                                {/* Header Section */}
+                                <div className="p-5 pb-4">
+                                    <div className="flex justify-between items-start">
+                                        <div>
+                                            <h2 className="text-base font-bold text-slate-900">Selected tickets</h2>
+                                            <p className="text-sm text-slate-500 mt-1">1 Adult</p>
                                         </div>
-                                    );
-                                })}
-                            </div>
+                                        <div className="text-right">
+                                            <span className="text-lg font-bold text-slate-900">€{grandTotal.toFixed(2)}</span>
+                                        </div>
+                                    </div>
+                                    <div className="mt-2 text-right">
+                                        <button className="text-xs font-medium text-slate-500 underline decoration-slate-300 underline-offset-4 hover:text-slate-800">
+                                            Price breakdown
+                                        </button>
+                                    </div>
+                                </div>
 
+                                {/* Divider */}
+                                <div className="border-t border-slate-100 mx-5"></div>
+
+                                {/* Breakdown Section */}
+                                <div className="p-5 space-y-3">
+                                    <div className="flex justify-between text-sm text-slate-600">
+                                        <span>Basket items</span>
+                                        <span>€{grandTotal.toFixed(2)}</span>
+                                    </div>
+                                    <div className="flex justify-between text-sm text-slate-600 items-center">
+                                        <div className="flex items-center gap-1.5">
+                                            <span>Booking fee</span>
+                                            <HelpCircle className="w-3.5 h-3.5 text-slate-400 cursor-help" />
+                                        </div>
+                                        <span>€{bookingFee.toFixed(2)}</span>
+                                    </div>
+                                </div>
+
+                                {/* Footer Section */}
+                                <div className="p-5 pt-0">
+                                    <div className="flex justify-between items-end mb-6">
+                                        <span className="text-lg font-bold text-slate-900">Total to pay</span>
+                                        <span className="text-2xl font-bold text-slate-900">€{(grandTotal + bookingFee).toFixed(2)}</span>
+                                    </div>
+
+                                    <button
+                                        disabled={!hasAnyCompleteSelection}
+                                        className={`w-full rounded-lg py-3.5 font-bold transition-all shadow-sm flex items-center justify-center gap-2 mb-6 ${hasAnyCompleteSelection
+                                            ? 'bg-pink-600 text-white hover:bg-pink-700 hover:shadow-md transform active:scale-[0.99]'
+                                            : 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                                            }`}
+                                    >
+                                        <span>Continue</span>
+                                        <ArrowRight className="w-5 h-5" />
+                                    </button>
+
+                                    {/* Leg Details (kept for context) */}
+                                    <div className="space-y-4 pt-4 border-t border-slate-100">
+                                        {data.map((leg, idx) => {
+                                            const selection = cartSelections[`leg-${idx}`];
+                                            return (
+                                                <div key={leg.id} className="relative pl-3 border-l-2 border-slate-100 hover:border-slate-300 transition-colors py-1">
+                                                    <div className="flex items-center justify-between mb-1">
+                                                        <h3 className="text-xs uppercase tracking-wide font-semibold text-slate-500">
+                                                            {leg.origin.split(' ')[0]} → {leg.destination.split(' ')[0]}
+                                                        </h3>
+                                                        {selection?.hasCompleteSelection && (
+                                                            <span className="text-xs font-bold text-pink-600">
+                                                                €{selection.totalPrice?.toFixed(2)}
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                    {!selection?.hasCompleteSelection && (
+                                                        <div className="text-xs text-amber-600 font-medium">
+                                                            Select option...
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

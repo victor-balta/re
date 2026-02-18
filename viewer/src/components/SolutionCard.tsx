@@ -1,8 +1,62 @@
 import React, { useState, useMemo } from 'react';
 import { SimplifiedSolution, FormattedOffer } from '../utils/data-processor';
 import { format, parseISO } from 'date-fns';
-import { ChevronDown, ChevronUp, Clock, Train, ArrowRight, CheckCircle2, Circle, Info, Moon, BedDouble, Armchair } from 'lucide-react';
+import { ChevronDown, ChevronUp, Clock, Train, ArrowRight, CheckCircle2, Circle, Info, Moon, BedDouble, Armchair, HelpCircle } from 'lucide-react';
 import { cn } from '../utils/cn';
+
+// Fare condition text based on flexibility type and carrier
+function getFareConditions(flexibility: string, carrier?: string): { refund: string; exchange: string; seating?: string } {
+    const flexLower = flexibility.toLowerCase();
+
+    // Non-flexible / Saver fares
+    if (flexLower.includes('non-flexible') || flexLower.includes('saver') || flexLower.includes('super') || flexLower.includes('esencial')) {
+        return {
+            refund: "Non-refundable. No refund available once booked.",
+            exchange: "Non-exchangeable. Ticket cannot be changed after purchase."
+        };
+    }
+
+    // Semi-flexible fares
+    if (flexLower.includes('semi-flexible') || flexLower.includes('semi flexible')) {
+        if (carrier?.toLowerCase().includes('eurostar')) {
+            return {
+                refund: "Refundable with €25/£25 fee per person up to 7 days before departure. Non-refundable within 7 days.",
+                exchange: "Change date/time free until 1 hour before departure. Pay difference if new fare costs more; no refund if cheaper."
+            };
+        }
+        if (carrier?.toLowerCase().includes('ave') || carrier?.toLowerCase().includes('renfe')) {
+            return {
+                refund: "70% refundable before departure. Non-refundable after departure.",
+                exchange: "Exchangeable before departure with 20% fee. Non-exchangeable after departure. Name change: €20 fee.",
+                seating: "Standard class seating with four seats per row."
+            };
+        }
+        if (carrier?.toLowerCase().includes('iryo')) {
+            return {
+                refund: "Partially refundable before departure with fee. Check conditions at booking.",
+                exchange: "Exchangeable before departure. Fare difference may apply."
+            };
+        }
+        return {
+            refund: "Partially refundable before departure. Cancellation fee applies.",
+            exchange: "Exchangeable before departure. Fare difference may apply."
+        };
+    }
+
+    // Fully-flexible fares
+    if (flexLower.includes('fully-flexible') || flexLower.includes('flexible') || flexLower.includes('premium')) {
+        return {
+            refund: "Fully refundable up to departure time. No cancellation fee.",
+            exchange: "Free exchanges up to departure. No fee for changes."
+        };
+    }
+
+    // Default
+    return {
+        refund: "Check fare conditions at booking.",
+        exchange: "Check exchange policy at booking."
+    };
+}
 
 interface SolutionCardProps {
     solution: SimplifiedSolution;
@@ -528,8 +582,48 @@ export function SolutionCard({ solution, onSelectionChange }: SolutionCardProps)
                                                                 }}
                                                                 className="h-3 w-3 sm:h-4 sm:w-4"
                                                             />
-                                                            <div className="flex flex-col gap-0.5">
-                                                                <span className="text-xs sm:text-sm font-semibold">{offer.flexibility}</span>
+                                                            <div className="flex flex-col gap-0.5 flex-1">
+                                                                <div className="flex items-center gap-1">
+                                                                    <span className="text-xs sm:text-sm font-semibold">{offer.flexibility}</span>
+                                                                    {/* Info icon with tooltip for fare conditions */}
+                                                                    <div className="relative group">
+                                                                        <HelpCircle className={cn(
+                                                                            "h-3.5 w-3.5 cursor-help",
+                                                                            isSelected ? "text-white/70" : "text-slate-400"
+                                                                        )} />
+                                                                        {/* Tooltip */}
+                                                                        <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block z-50 w-72">
+                                                                            <div className="bg-slate-800 text-white text-xs rounded-lg p-3 shadow-xl">
+                                                                                <div className="font-semibold mb-2 text-sm border-b border-slate-600 pb-1">
+                                                                                    Fare Conditions
+                                                                                </div>
+                                                                                {(() => {
+                                                                                    const conditions = getFareConditions(offer.flexibility, segment.carrier);
+                                                                                    return (
+                                                                                        <>
+                                                                                            <div className="mb-2">
+                                                                                                <span className="font-medium text-green-400">Refunds:</span>
+                                                                                                <p className="text-slate-300 mt-0.5">{conditions.refund}</p>
+                                                                                            </div>
+                                                                                            <div className="mb-2">
+                                                                                                <span className="font-medium text-blue-400">Exchanges:</span>
+                                                                                                <p className="text-slate-300 mt-0.5">{conditions.exchange}</p>
+                                                                                            </div>
+                                                                                            {conditions.seating && (
+                                                                                                <div>
+                                                                                                    <span className="font-medium text-yellow-400">Seating:</span>
+                                                                                                    <p className="text-slate-300 mt-0.5">{conditions.seating}</p>
+                                                                                                </div>
+                                                                                            )}
+                                                                                        </>
+                                                                                    );
+                                                                                })()}
+                                                                            </div>
+                                                                            {/* Arrow */}
+                                                                            <div className="absolute left-3 top-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-800"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                                 <span className="text-[10px] sm:text-xs opacity-75">
                                                                     {priceDiff === 0 ? 'Included' : `+€${priceDiff.toFixed(2)}`}
                                                                 </span>
