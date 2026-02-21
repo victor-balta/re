@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SolutionCard } from './components/SolutionCard';
-import { ArrowRight, Train, Calendar, AlertTriangle, CloudRain, Info, HelpCircle, TrendingUp } from 'lucide-react';
+import { ArrowRight, Train, Calendar, AlertTriangle, CloudRain, Info, HelpCircle, TrendingUp, Star, X } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import { SimplifiedLeg, SimplifiedSolution, SimplifiedSegment, FormattedOffer as BaseFormattedOffer } from './utils/data-processor';
 
@@ -395,6 +395,7 @@ export default function App() {
     const [data, setData] = useState<SimplifiedLeg[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
     const [selectedLegIndex, setSelectedLegIndex] = useState(0);
     const [cartSelections, setCartSelections] = useState<Record<string, {
@@ -624,6 +625,7 @@ export default function App() {
 
                                     <button
                                         disabled={!hasAnyCompleteSelection}
+                                        onClick={() => setShowUpgradeModal(true)}
                                         className={`w-full rounded-lg py-3.5 font-bold transition-all shadow-sm flex items-center justify-center gap-2 mb-6 ${hasAnyCompleteSelection
                                             ? 'bg-pink-600 text-white hover:bg-pink-700 hover:shadow-md transform active:scale-[0.99]'
                                             : 'bg-slate-100 text-slate-400 cursor-not-allowed'
@@ -664,6 +666,69 @@ export default function App() {
                     </div>
                 </div>
             </div>
+
+            {/* Upgrade Modal */}
+            {showUpgradeModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
+                    <div className="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden" onClick={e => e.stopPropagation()}>
+                        <div className="bg-gradient-to-r from-pink-600 to-purple-600 p-6 text-white relative">
+                            <button
+                                onClick={() => setShowUpgradeModal(false)}
+                                className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+                            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-md">
+                                <Star className="w-6 h-6 text-yellow-300" fill="currentColor" />
+                            </div>
+                            <h2 className="text-2xl font-bold mb-1">Upgrade to 1st Class</h2>
+                            <p className="text-white/90 text-sm">Treat yourself! Get the ultimate comfort for only €12 more.</p>
+                        </div>
+                        <div className="p-6 space-y-4 bg-slate-50">
+                            <ul className="space-y-3">
+                                <li className="flex items-start gap-3 text-sm text-slate-700">
+                                    <div className="mt-0.5 text-pink-600">✓</div>
+                                    Extra legroom and wider, more comfortable seats
+                                </li>
+                                <li className="flex items-start gap-3 text-sm text-slate-700">
+                                    <div className="mt-0.5 text-pink-600">✓</div>
+                                    Complimentary premium meal and drinks
+                                </li>
+                                <li className="flex items-start gap-3 text-sm text-slate-700">
+                                    <div className="mt-0.5 text-pink-600">✓</div>
+                                    Exclusive lounge access before departure
+                                </li>
+                                <li className="flex items-start gap-3 text-sm text-slate-700">
+                                    <div className="mt-0.5 text-pink-600">✓</div>
+                                    Fast-track boarding
+                                </li>
+                            </ul>
+
+                            <div className="pt-4 flex flex-col gap-3">
+                                <button
+                                    onClick={() => {
+                                        setShowUpgradeModal(false);
+                                        window.location.hash = '#/details';
+                                    }}
+                                    className="w-full bg-slate-900 text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-colors shadow-sm flex justify-center items-center gap-2"
+                                >
+                                    <span>Upgrade & Continue (+€12.00)</span>
+                                    <ArrowRight className="w-4 h-4" />
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        setShowUpgradeModal(false);
+                                        window.location.hash = '#/details';
+                                    }}
+                                    className="w-full text-slate-500 font-medium py-2 rounded-xl hover:text-slate-700 transition-colors text-sm"
+                                >
+                                    No thanks, continue with my current selection
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

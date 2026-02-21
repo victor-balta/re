@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import SleeperEdgeCasePage from './pages/SleeperEdgeCasePage.tsx'
+import DetailsPage from './pages/DetailsPage.tsx'
+import PaymentPage from './pages/PaymentPage.tsx'
 import './index.css'
 
 function Router() {
@@ -16,6 +18,12 @@ function Router() {
     // Simple hash-based routing
     if (route === '#/sleeper') {
         return <SleeperEdgeCasePage />
+    }
+    if (route === '#/details') {
+        return <DetailsPage />
+    }
+    if (route === '#/payment') {
+        return <PaymentPage />
     }
 
     return <App />
