@@ -1,0 +1,1356 @@
+{
+    "search": {
+        "id": 332127933,
+        "created_at": "2026-03-02T19:57:22.997+00:00",
+        "updated_at": "2026-03-02T19:57:27.417+00:00",
+        "completed_at": "2026-03-02T19:57:27.417+00:00",
+        "freshness": "fresh",
+        "currency": "EUR",
+        "two_stage_search_required": false,
+        "error_code": null,
+        "outbound_leg": {
+            "results": [
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 62995,
+                                        "name": "Venezia S. Lucia",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T02:14:00.000+01:00",
+                                    "arrival_time": "2026-03-07T08:34:00.000+01:00",
+                                    "train_number": "40466",
+                                    "train_name": "Nightjet",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207020,
+                                    "name": "Sparschiene inkl. Reservierung, Second, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207021,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, Second, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207022,
+                                    "name": "Standard-Ticket inkl. Reservierung, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207023,
+                                    "name": "Sparschiene inkl. Reservierung, 6-Berth Couchette, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207024,
+                                    "name": "Sparschiene inkl. Reservierung, 6-Berth Ladies Only Couchette, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207025,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 6-Berth Couchette, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207026,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 6-Berth Ladies Only Couchette, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207027,
+                                    "name": "Sparschiene inkl. Reservierung, 4-Berth Couchette, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207028,
+                                    "name": "Sparschiene inkl. Reservierung, 4-Berth Ladies Only Couchette, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207029,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 4-Berth Couchette, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207030,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 4-Berth Ladies Only Couchette, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207031,
+                                    "name": "Standard-Ticket inkl. Reservierung, 6-Berth Couchette, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207032,
+                                    "name": "Standard-Ticket inkl. Reservierung, 6-Berth Ladies Only Couchette, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207033,
+                                    "name": "Sparschiene inkl. Reservierung, 3-Bed Ladies Only Sleeper, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207034,
+                                    "name": "Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207035,
+                                    "name": "Standard-Ticket inkl. Reservierung, 4-Berth Couchette, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207036,
+                                    "name": "Standard-Ticket inkl. Reservierung, 4-Berth Ladies Only Couchette, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207037,
+                                    "name": "Sparschiene inkl. Reservierung, 2-Bed Ladies Only Sleeper, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207038,
+                                    "name": "Sparschiene inkl. Reservierung, 2-Bed Sleeper, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207039,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 3-Bed Ladies Only Sleeper, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207040,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207041,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 2-Bed Ladies Only Sleeper, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207042,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 2-Bed Sleeper, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207043,
+                                    "name": "Standard-Ticket inkl. Reservierung, 3-Bed Ladies Only Sleeper, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207044,
+                                    "name": "Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207045,
+                                    "name": "Standard-Ticket inkl. Reservierung, 2-Bed Ladies Only Sleeper, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207046,
+                                    "name": "Standard-Ticket inkl. Reservierung, 2-Bed Sleeper, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207047,
+                                    "name": "Sparschiene inkl. Reservierung, 3-Bed Sleeper, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207048,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 3-Bed Sleeper, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207049,
+                                    "name": "Sparschiene inkl. Reservierung, 1-Bed Sleeper, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7990
+                                    }
+                                },
+                                {
+                                    "id": 8244207050,
+                                    "name": "Standard-Ticket inkl. Reservierung, 3-Bed Sleeper, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                },
+                                {
+                                    "id": 8244207051,
+                                    "name": "Sparschiene Komfort inkl. Reservierung, 1-Bed Sleeper, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 8490
+                                    }
+                                },
+                                {
+                                    "id": 8244207052,
+                                    "name": "Standard-Ticket inkl. Reservierung, 1-Bed Sleeper, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9490
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 2507,
+                                        "name": "Innsbruck Hbf",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T06:56:00.000+01:00",
+                                    "arrival_time": "2026-03-07T08:44:00.000+01:00",
+                                    "train_number": "668",
+                                    "train_name": "RJ",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 2507,
+                                        "name": "Innsbruck Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 62995,
+                                        "name": "Venezia S. Lucia",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T09:24:00.000+01:00",
+                                    "arrival_time": "2026-03-07T14:25:00.000+01:00",
+                                    "train_number": "1281",
+                                    "train_name": "EC",
+                                    "train_code": "db_bahn_eurocity"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207053,
+                                    "name": "Super Offerta, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5990
+                                    }
+                                },
+                                {
+                                    "id": 8244207054,
+                                    "name": "Offerta, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6490
+                                    }
+                                },
+                                {
+                                    "id": 8244207055,
+                                    "name": "Flexpreis Europa, Standard, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13050
+                                    }
+                                },
+                                {
+                                    "id": 8244207056,
+                                    "name": "Flexpreis Europa, First, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 24485
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T07:07:00.000+01:00",
+                                    "arrival_time": "2026-03-07T09:28:00.000+01:00",
+                                    "train_number": "899",
+                                    "train_name": "Intercity",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 803,
+                                        "name": "Udine",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T09:45:00.000+01:00",
+                                    "arrival_time": "2026-03-07T11:30:00.000+01:00",
+                                    "train_number": "1821",
+                                    "train_name": "Schnellzug",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207057,
+                                    "name": "Standard-Ticket (Nahverkehr in Italien), Second, Fully-Flexible | Standard-Ticket (Nahverkehr in Italien), Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5040
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 803,
+                                        "name": "Udine",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 63198,
+                                        "name": "Venezia Mestre",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T12:09:00.000+01:00",
+                                    "arrival_time": "2026-03-07T13:46:00.000+01:00",
+                                    "train_number": "3882",
+                                    "train_name": "Regionale Veloce",
+                                    "train_code": "Regionale Veloce"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207058,
+                                    "name": "Ordinaria, Second Reserved, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 1410
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T07:07:00.000+01:00",
+                                    "arrival_time": "2026-03-07T09:28:00.000+01:00",
+                                    "train_number": "899",
+                                    "train_name": "Intercity",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 803,
+                                        "name": "Udine",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T09:45:00.000+01:00",
+                                    "arrival_time": "2026-03-07T11:30:00.000+01:00",
+                                    "train_number": "1821",
+                                    "train_name": "Schnellzug",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207059,
+                                    "name": "Standard-Ticket (Nahverkehr in Italien), Second, Fully-Flexible | Standard-Ticket (Nahverkehr in Italien), Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5040
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 803,
+                                        "name": "Udine",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 62995,
+                                        "name": "Venezia S. Lucia",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T12:09:00.000+01:00",
+                                    "arrival_time": "2026-03-07T13:59:00.000+01:00",
+                                    "train_number": "3882",
+                                    "train_name": "Regionale Veloce",
+                                    "train_code": "Regionale Veloce"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207060,
+                                    "name": "Ordinaria, Second Reserved, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 1445
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T07:07:00.000+01:00",
+                                    "arrival_time": "2026-03-07T09:28:00.000+01:00",
+                                    "train_number": "899",
+                                    "train_name": "Intercity",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 17824,
+                                        "name": "Cervignano-Aquileia-Grado",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T09:45:00.000+01:00",
+                                    "arrival_time": "2026-03-07T12:16:00.000+01:00",
+                                    "train_number": "1821",
+                                    "train_name": "Schnellzug",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207061,
+                                    "name": "Standard-Ticket (Nahverkehr in Italien), Second, Fully-Flexible | Standard-Ticket (Nahverkehr in Italien), Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5140
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 17824,
+                                        "name": "Cervignano-Aquileia-Grado",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 63198,
+                                        "name": "Venezia Mestre",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T12:53:00.000+01:00",
+                                    "arrival_time": "2026-03-07T14:09:00.000+01:00",
+                                    "train_number": "3440",
+                                    "train_name": "Lagune Line",
+                                    "train_code": "Lagune Line"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207062,
+                                    "name": "Ordinaria, Second Reserved, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 1115
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T07:07:00.000+01:00",
+                                    "arrival_time": "2026-03-07T09:28:00.000+01:00",
+                                    "train_number": "899",
+                                    "train_name": "Intercity",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 17824,
+                                        "name": "Cervignano-Aquileia-Grado",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T09:45:00.000+01:00",
+                                    "arrival_time": "2026-03-07T12:16:00.000+01:00",
+                                    "train_number": "1821",
+                                    "train_name": "Schnellzug",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207063,
+                                    "name": "Standard-Ticket (Nahverkehr in Italien), Second, Fully-Flexible | Standard-Ticket (Nahverkehr in Italien), Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 5140
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 17824,
+                                        "name": "Cervignano-Aquileia-Grado",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 62995,
+                                        "name": "Venezia S. Lucia",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T12:53:00.000+01:00",
+                                    "arrival_time": "2026-03-07T14:21:00.000+01:00",
+                                    "train_number": "3440",
+                                    "train_name": "Lagune Line",
+                                    "train_code": "Lagune Line"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207064,
+                                    "name": "Ordinaria, Second Reserved, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 1160
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T08:07:00.000+01:00",
+                                    "arrival_time": "2026-03-07T10:32:00.000+01:00",
+                                    "train_number": "551",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 803,
+                                        "name": "Udine",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T10:41:00.000+01:00",
+                                    "arrival_time": "2026-03-07T12:10:00.000+01:00",
+                                    "train_number": "137",
+                                    "train_name": "Railjet Xpress",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207065,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6750
+                                    }
+                                },
+                                {
+                                    "id": 8244207066,
+                                    "name": "Sparschiene, First, Non-Flexible | Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9840
+                                    }
+                                },
+                                {
+                                    "id": 8244207067,
+                                    "name": "Sparschiene, Business, Non-Flexible | Sparschiene, Business, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9840
+                                    }
+                                },
+                                {
+                                    "id": 8244207068,
+                                    "name": "Standard-Ticket, First, Fully-Flexible | Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 12810
+                                    }
+                                },
+                                {
+                                    "id": 8244207069,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible | Standard-Ticket, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 12810
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 803,
+                                        "name": "Udine",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 63198,
+                                        "name": "Venezia Mestre",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T12:32:00.000+01:00",
+                                    "arrival_time": "2026-03-07T14:34:00.000+01:00",
+                                    "train_number": "16787",
+                                    "train_name": "Regionale",
+                                    "train_code": "Regionale"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207070,
+                                    "name": "Ordinaria, Second Reserved, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 1410
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T08:07:00.000+01:00",
+                                    "arrival_time": "2026-03-07T10:32:00.000+01:00",
+                                    "train_number": "551",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 803,
+                                        "name": "Udine",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T10:41:00.000+01:00",
+                                    "arrival_time": "2026-03-07T12:10:00.000+01:00",
+                                    "train_number": "137",
+                                    "train_name": "Railjet Xpress",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207071,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 6750
+                                    }
+                                },
+                                {
+                                    "id": 8244207072,
+                                    "name": "Sparschiene, First, Non-Flexible | Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9840
+                                    }
+                                },
+                                {
+                                    "id": 8244207073,
+                                    "name": "Sparschiene, Business, Non-Flexible | Sparschiene, Business, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9840
+                                    }
+                                },
+                                {
+                                    "id": 8244207074,
+                                    "name": "Standard-Ticket, First, Fully-Flexible | Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 12810
+                                    }
+                                },
+                                {
+                                    "id": 8244207075,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible | Standard-Ticket, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 12810
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 803,
+                                        "name": "Udine",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 62995,
+                                        "name": "Venezia S. Lucia",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T12:32:00.000+01:00",
+                                    "arrival_time": "2026-03-07T14:47:00.000+01:00",
+                                    "train_number": "16787",
+                                    "train_name": "Regionale",
+                                    "train_code": "Regionale"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207076,
+                                    "name": "Ordinaria, Second Reserved, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 1445
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T08:07:00.000+01:00",
+                                    "arrival_time": "2026-03-07T10:32:00.000+01:00",
+                                    "train_number": "551",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 17824,
+                                        "name": "Cervignano-Aquileia-Grado",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T10:41:00.000+01:00",
+                                    "arrival_time": "2026-03-07T12:43:00.000+01:00",
+                                    "train_number": "137",
+                                    "train_name": "Railjet Xpress",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207077,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7390
+                                    }
+                                },
+                                {
+                                    "id": 8244207078,
+                                    "name": "Sparschiene, First, Non-Flexible | Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9970
+                                    }
+                                },
+                                {
+                                    "id": 8244207079,
+                                    "name": "Sparschiene, Business, Non-Flexible | Sparschiene, Business, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9970
+                                    }
+                                },
+                                {
+                                    "id": 8244207080,
+                                    "name": "Standard-Ticket, First, Fully-Flexible | Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13950
+                                    }
+                                },
+                                {
+                                    "id": 8244207081,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible | Standard-Ticket, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13950
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 17824,
+                                        "name": "Cervignano-Aquileia-Grado",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 63198,
+                                        "name": "Venezia Mestre",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T13:25:00.000+01:00",
+                                    "arrival_time": "2026-03-07T14:48:00.000+01:00",
+                                    "train_number": "7945",
+                                    "train_name": "Regionale",
+                                    "train_code": "Regionale"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207083,
+                                    "name": "Ordinaria, Second Reserved, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 1115
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "products": [
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 222399,
+                                        "name": "Salzburg Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 62123,
+                                        "name": "Salzburg",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T08:07:00.000+01:00",
+                                    "arrival_time": "2026-03-07T10:32:00.000+01:00",
+                                    "train_number": "551",
+                                    "train_name": "Railjet",
+                                    "train_code": null
+                                },
+                                {
+                                    "start_station": {
+                                        "id": 22587,
+                                        "name": "Villach Hbf",
+                                        "iata_code": null
+                                    },
+                                    "start_meta_station": {
+                                        "id": 222380,
+                                        "name": "Villach",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 17824,
+                                        "name": "Cervignano-Aquileia-Grado",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T10:41:00.000+01:00",
+                                    "arrival_time": "2026-03-07T12:43:00.000+01:00",
+                                    "train_number": "137",
+                                    "train_name": "Railjet Xpress",
+                                    "train_code": null
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207086,
+                                    "name": "Standard-Ticket, Second, Fully-Flexible | Standard-Ticket, Second, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 7390
+                                    }
+                                },
+                                {
+                                    "id": 8244207088,
+                                    "name": "Sparschiene, First, Non-Flexible | Sparschiene, First, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9970
+                                    }
+                                },
+                                {
+                                    "id": 8244207089,
+                                    "name": "Sparschiene, Business, Non-Flexible | Sparschiene, Business, Non-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 9970
+                                    }
+                                },
+                                {
+                                    "id": 8244207090,
+                                    "name": "Standard-Ticket, First, Fully-Flexible | Standard-Ticket, First, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13950
+                                    }
+                                },
+                                {
+                                    "id": 8244207092,
+                                    "name": "Standard-Ticket, Business, Fully-Flexible | Standard-Ticket, Business, Fully-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 13950
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "connections": [
+                                {
+                                    "start_station": {
+                                        "id": 17824,
+                                        "name": "Cervignano-Aquileia-Grado",
+                                        "iata_code": null
+                                    },
+                                    "finish_station": {
+                                        "id": 62995,
+                                        "name": "Venezia S. Lucia",
+                                        "iata_code": null
+                                    },
+                                    "finish_meta_station": {
+                                        "id": 221970,
+                                        "name": "Venezia",
+                                        "iata_code": null
+                                    },
+                                    "departure_time": "2026-03-07T13:53:00.000+01:00",
+                                    "arrival_time": "2026-03-07T15:21:00.000+01:00",
+                                    "train_number": "3560",
+                                    "train_name": "Lagune Line",
+                                    "train_code": "Lagune Line"
+                                }
+                            ],
+                            "fares": [
+                                {
+                                    "id": 8244207093,
+                                    "name": "Ordinaria, Second Reserved, Semi-Flexible",
+                                    "price": {
+                                        "currency": "EUR",
+                                        "cents": 1160
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "inbound_leg": null
+    }
+}

@@ -4,6 +4,7 @@ import App from './App.tsx'
 import SleeperEdgeCasePage from './pages/SleeperEdgeCasePage.tsx'
 import DetailsPage from './pages/DetailsPage.tsx'
 import PaymentPage from './pages/PaymentPage.tsx'
+import NightTrainVisualizer from './pages/NightTrainVisualizer.tsx'
 import './index.css'
 
 function Router() {
@@ -24,6 +25,9 @@ function Router() {
     }
     if (route === '#/payment') {
         return <PaymentPage />
+    }
+    if (route === '#/night-train') {
+        return <NightTrainVisualizer />
     }
 
     return <App />

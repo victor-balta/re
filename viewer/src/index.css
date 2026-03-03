@@ -2,8 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   DESIGN SYSTEM — Rail Europe Fare Selection UI
+   Matches design.md v1.0 spec exactly.
+   ============================================================ */
+
 @layer base {
+
+  /* Tokens */
+  :root {
+    --color-primary: #D0105A;
+    --color-primary-light: #FFF0F5;
+    --color-success: #0A9A5B;
+    --color-bg: #F5F5F3;
+    --color-surface: #FFFFFF;
+    --color-surface-alt: #FAFAFA;
+    --color-border: #E5E5E5;
+    --color-border-input: #E0E0E0;
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #888888;
+    --color-text-muted: #999999;
+    --color-disabled-bg: #E5E5E5;
+    --color-disabled-text: #AAAAAA;
+
+    --radius-card: 12px;
+    --radius-fare: 9px;
+    --radius-tab: 8px;
+    --radius-pill: 50px;
+    --radius-badge: 20px;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
   body {
-    @apply bg-slate-50 text-slate-900;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Remove default tap highlight on mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Smooth focus rings */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+
+  /* Hide scrollbar but keep scroll */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Primary colour helpers */
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-primary-light {
+    background-color: var(--color-primary-light);
+  }
+
+  /* Design-token border */
+  .border-design {
+    border: 1.5px solid var(--color-border);
+  }
+
+  .border-design-selected {
+    border: 2px solid var(--color-primary);
+  }
+
+  .border-design-input {
+    border: 2px solid var(--color-border-input);
+  }
+
+  /* Radius helpers */
+  .rounded-card {
+    border-radius: var(--radius-card);
+  }
+
+  .rounded-fare {
+    border-radius: var(--radius-fare);
+  }
+
+  .rounded-pill {
+    border-radius: var(--radius-pill);
+  }
+
+  .rounded-badge {
+    border-radius: var(--radius-badge);
   }
 }
