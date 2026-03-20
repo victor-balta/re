@@ -53,7 +53,7 @@ function parseFareName(name: string): ParsedFarePart[] {
             { pattern: 'Infinita Bistró', name: 'Infinita Bistró', tier: 'premium' },
             { pattern: 'Infinita', name: 'Infinita', tier: 'premium' },
             { pattern: 'Serenita', name: 'Serenita', tier: 'flexible' },
-            { pattern: 'Base', name: 'Base', tier: 'flexible' },
+            { pattern: 'Base', name: 'Base', tier: 'saver' },
             { pattern: 'Ordinaria', name: 'Ordinaria', tier: 'standard' },
             { pattern: 'Super Flex', name: 'Super Flex', tier: 'premium' },
             { pattern: 'Flex', name: 'Flex', tier: 'flexible' },
@@ -63,23 +63,8 @@ function parseFareName(name: string): ParsedFarePart[] {
             { pattern: 'Flex Première Signature', name: 'Flex Première Signature', tier: 'premium' },
             { pattern: 'Flex Première', name: 'Flex Première', tier: 'flexible' },
             { pattern: 'Semi Flex Première', name: 'Semi Flex Première', tier: 'standard' },
-            { pattern: 'Tarif Flex Première', name: 'Flex Première', tier: 'flexible' },
-            { pattern: 'Tarif Standard Première', name: 'Standard Première', tier: 'standard' },
-            { pattern: 'Tarif Standard Seconde', name: 'Standard Seconde', tier: 'saver' },
-            { pattern: 'Tarif Normal Train', name: 'Normal', tier: 'standard' },
-            { pattern: 'Básico', name: 'Básico', tier: 'saver' },
-            { pattern: 'Elige', name: 'Elige', tier: 'standard' },
-            { pattern: 'Prémium', name: 'Prémium', tier: 'premium' },
-            { pattern: 'Ticket Weekend', name: 'Weekend', tier: 'saver' },
-            { pattern: 'Flex Adult', name: 'Flex Adult', tier: 'flexible' },
-            { pattern: 'Non Flex Standard', name: 'Non Flex Standard', tier: 'saver' },
-            { pattern: 'Semi Flex Standard', name: 'Semi Flex Standard', tier: 'standard' },
             { pattern: 'Flex Standard', name: 'Flex Standard', tier: 'flexible' },
-            { pattern: 'Economy', name: 'Economy', tier: 'saver' },
-            { pattern: 'Supersaver Ticket', name: 'Supersaver', tier: 'saver' },
-            { pattern: 'Point-to-point Ticket', name: 'Point-to-point', tier: 'standard' },
-            { pattern: 'Saver Day Pass', name: 'Saver Day Pass', tier: 'standard' },
-            { pattern: 'Smart 2', name: 'Smart 2', tier: 'saver' },
+            { pattern: 'Semi Flex Standard', name: 'Semi Flex Standard', tier: 'standard' },
             { pattern: 'Eurostar Premier', name: 'Eurostar Premier', tier: 'premium' },
             { pattern: 'Eurostar Plus', name: 'Eurostar Plus', tier: 'standard' },
             { pattern: 'Eurostar Standard', name: 'Eurostar Standard', tier: 'saver' },
@@ -102,7 +87,6 @@ function parseFareName(name: string): ParsedFarePart[] {
             { pattern: '6-Berth Couchette', type: '6-Berth Couchette', category: 'Couchette', serviceClass: 'Economy' },
             { pattern: 'Club Executive Salotto', type: 'Club Executive Salotto', category: 'Seat', serviceClass: 'Premium' },
             { pattern: 'Club Executive', type: 'Club Executive', category: 'Seat', serviceClass: 'Premium' },
-            { pattern: 'Business Suite', type: 'Suite', category: 'Seat', serviceClass: 'Premium' },
             { pattern: 'Executive', type: 'Executive', category: 'Seat', serviceClass: 'Premium' },
             { pattern: 'Prima Business', type: 'Prima Business', category: 'Seat', serviceClass: 'Business' },
             { pattern: 'Business Silent Area', type: 'Business', category: 'Seat', serviceClass: 'Business' },
@@ -111,14 +95,9 @@ function parseFareName(name: string): ParsedFarePart[] {
             { pattern: 'Eurostar Plus', type: 'Plus', category: 'Seat', serviceClass: 'First' },
             { pattern: 'Eurostar Standard', type: 'Standard', category: 'Seat', serviceClass: 'Standard' },
             { pattern: 'Business', type: 'Business', category: 'Seat', serviceClass: 'Business' },
-            { pattern: 'Comfort', type: 'Comfort', category: 'Seat', serviceClass: 'First' },
-            { pattern: 'Premium', type: 'Premium', category: 'Seat', serviceClass: 'First' },
             { pattern: 'First Silent Area', type: 'First', category: 'Seat', serviceClass: 'First' },
             { pattern: 'First Reserved', type: 'First', category: 'Seat', serviceClass: 'First' },
-            { pattern: 'First Class', type: 'First', category: 'Seat', serviceClass: 'First' },
             { pattern: 'First', type: 'First', category: 'Seat', serviceClass: 'First' },
-            { pattern: 'Second Silent Area', type: 'Second', category: 'Seat', serviceClass: 'Standard' },
-            { pattern: 'Second Class', type: 'Second', category: 'Seat', serviceClass: 'Standard' },
             { pattern: 'Second Reserved', type: 'Second', category: 'Seat', serviceClass: 'Standard' },
             { pattern: 'Second Family', type: 'Second', category: 'Seat', serviceClass: 'Standard' },
             { pattern: 'Second', type: 'Second', category: 'Seat', serviceClass: 'Standard' },
@@ -134,7 +113,7 @@ function parseFareName(name: string): ParsedFarePart[] {
         }
         let flexibility: 'Non-Flexible' | 'Semi-Flexible' | 'Fully-Flexible' | 'Unknown' = 'Unknown';
         if (lowerPart.includes('fully-flexible') || lowerPart.includes('fully flexible')) flexibility = 'Fully-Flexible';
-        else if (lowerPart.includes('semi-flexible') || lowerPart.includes('semi flexible') || lowerPart.includes('ticket weekend')) flexibility = 'Semi-Flexible';
+        else if (lowerPart.includes('semi-flexible') || lowerPart.includes('semi flexible')) flexibility = 'Semi-Flexible';
         else if (lowerPart.includes('non-flexible') || lowerPart.includes('non flexible') || lowerPart.includes('nonflex')) flexibility = 'Non-Flexible';
         let zone: string | null = null;
         if (lowerPart.includes('silent area')) zone = 'Silent Area';
@@ -405,9 +384,6 @@ export default function App() {
     const [mobileModalSolution, setMobileModalSolution] = useState<SimplifiedSolution | null>(null);
     const [mobileModalSel, setMobileModalSel] = useState<{ price: number | null; complete: boolean }>({ price: null, complete: false });
 
-    // Global View Mode
-    const [viewMode, setViewMode] = useState<'stacked' | 'tabs' | 'accordion' | 'modal'>('tabs');
-
     // Clear any stale #/night-train hash on mount
     useEffect(() => {
         if (window.location.hash) {
@@ -549,24 +525,7 @@ export default function App() {
                             {DATASETS.map(d => <option key={d.id} value={d.id}>{d.label}</option>)}
                         </select>
                     </div>
-                    <div className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                        {/* Switcher */}
-                        <div style={{ display: 'flex', gap: 4, background: '#F1F5F9', padding: 4, borderRadius: 8 }}>
-                            {(['stacked', 'tabs', 'accordion', 'modal'] as const).map(mode => (
-                                <button key={mode} onClick={() => setViewMode(mode)} style={{
-                                    background: viewMode === mode ? '#fff' : 'transparent',
-                                    border: 'none',
-                                    boxShadow: viewMode === mode ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                                    borderRadius: 6, padding: '4px 10px', fontSize: 11, fontWeight: 700, cursor: 'pointer',
-                                    color: viewMode === mode ? '#D0105A' : '#64748B', textTransform: 'capitalize',
-                                    transition: 'all 0.15s'
-                                }}>
-                                    {mode}
-                                </button>
-                            ))}
-                        </div>
-                        <div style={{ fontSize: 11, color: '#888', background: '#F5F5F3', padding: '3px 8px', borderRadius: 5, fontFamily: 'monospace', whiteSpace: 'nowrap', flexShrink: 0 }}>{selectedDatasetId}</div>
-                    </div>
+                    <div className="desktop-only" style={{ fontSize: 11, color: '#888', background: '#F5F5F3', padding: '3px 8px', borderRadius: 5, fontFamily: 'monospace', whiteSpace: 'nowrap', flexShrink: 0 }}>{selectedDatasetId}</div>
                 </div>
             </header>
 
@@ -681,7 +640,7 @@ export default function App() {
                                     <div key={solution.id}>
                                         {/* Desktop: inline expand */}
                                         <div className="sol-desktop">
-                                            <SolutionCard solution={solution} onSelectionChange={handleSelectionChange} viewMode={viewMode} />
+                                            <SolutionCard solution={solution} onSelectionChange={handleSelectionChange} />
                                         </div>
                                         {/* Mobile: tap → modal */}
                                         <div className="sol-mobile">

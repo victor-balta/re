@@ -3,9 +3,7 @@ import { SimplifiedSolution } from '../utils/data-processor';
 import { format, parseISO } from 'date-fns';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { FarePanel, CarrierBadge, getMultiLegMinPrice } from './FarePanel';
-import { FarePanelTabs } from './FarePanelTabs';
-import { FarePanelAccordion } from './FarePanelAccordion';
-import { FarePanelModal } from './FarePanelModal';
+
 const C = {
     primary: '#D0105A',
     primaryLight: '#FFF0F5',
@@ -21,7 +19,6 @@ const C = {
 interface SolutionCardProps {
     solution: SimplifiedSolution;
     onSelectionChange?: (solutionId: string, totalPrice: number | null, hasCompleteSelection: boolean) => void;
-    viewMode?: 'stacked' | 'tabs' | 'accordion' | 'modal';
 }
 
 // small pill for direct / N changes
@@ -209,17 +206,10 @@ function ExpandedJourneyBreakdown({ solution }: { solution: SimplifiedSolution }
     );
 }
 
-import { X } from 'lucide-react';
-
-export function SolutionCard({ solution, onSelectionChange, viewMode = 'tabs' }: SolutionCardProps) {
+export function SolutionCard({ solution, onSelectionChange }: SolutionCardProps) {
     const [expanded, setExpanded] = useState(false);
-    const [showDesktopModal, setShowDesktopModal] = useState(false);
-    const [modalSubView, setModalSubView] = useState<'tabs' | 'accordion'>('tabs');
     const [hasComplete, setHasComplete] = useState(false);
     const [totalPrice, setTotalPrice] = useState<number | null>(null);
-
-    const isModalMode = viewMode === 'modal' && solution.segments.length > 1;
-    const isVisualExpanded = expanded && !isModalMode;
 
     const lowestPrice = getMultiLegMinPrice(solution);
     const origin = solution.segments[0]?.origin ?? '';
@@ -240,23 +230,17 @@ export function SolutionCard({ solution, onSelectionChange, viewMode = 'tabs' }:
     return (
         <div style={{
             background: C.surface,
-            border: `1.5px solid ${isVisualExpanded ? C.primary : C.border}`,
+            border: `1.5px solid ${expanded ? C.primary : C.border}`,
             borderRadius: 14,
             overflow: 'hidden',
             transition: 'border-color 0.15s, box-shadow 0.15s',
-            boxShadow: isVisualExpanded
+            boxShadow: expanded
                 ? '0 0 0 3px rgba(208,16,90,0.08), 0 4px 16px rgba(0,0,0,0.06)'
                 : '0 1px 4px rgba(0,0,0,0.04)',
         }}>
             {/* ── Collapsed header ── */}
             <div
-                onClick={() => {
-                    if (isModalMode) {
-                        setShowDesktopModal(true);
-                    } else {
-                        setExpanded(e => !e);
-                    }
-                }}
+                onClick={() => setExpanded(e => !e)}
                 className="re-card-row"
                 style={{
                     cursor: 'pointer',
@@ -265,8 +249,8 @@ export function SolutionCard({ solution, onSelectionChange, viewMode = 'tabs' }:
                     alignItems: 'center',
                     gap: 0,
                     padding: '16px 20px',
-                    background: isVisualExpanded ? '#FEFEFE' : C.surface,
-                    borderBottom: isVisualExpanded ? `1px solid ${C.eborder}` : 'none',
+                    background: expanded ? '#FEFEFE' : C.surface,
+                    borderBottom: expanded ? `1px solid ${C.eborder}` : 'none',
                 }}
             >
                 {/* DEP */}
@@ -325,12 +309,12 @@ export function SolutionCard({ solution, onSelectionChange, viewMode = 'tabs' }:
                 <div style={{ paddingLeft: 12 }}>
                     <div style={{
                         width: 28, height: 28, borderRadius: '50%',
-                        background: isVisualExpanded ? C.primary : '#F1F5F9',
+                        background: expanded ? C.primary : '#F1F5F9',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         transition: 'background 0.15s',
                         flexShrink: 0,
                     }}>
-                        {isVisualExpanded
+                        {expanded
                             ? <ChevronUp style={{ width: 15, height: 15, color: '#fff' }} />
                             : <ChevronDown style={{ width: 15, height: 15, color: C.textSec }} />}
                     </div>
@@ -338,104 +322,11 @@ export function SolutionCard({ solution, onSelectionChange, viewMode = 'tabs' }:
             </div>
 
             {/* ── Expanded panel ── */}
-            {isVisualExpanded && (
+            {expanded && (
                 <div className="re-card-panel" style={{ padding: '20px 20px 24px' }}>
-                    {viewMode === 'stacked' || solution.segments.length === 1 ? (
-                        <>
-                            {viewMode === 'stacked' && <ExpandedJourneyBreakdown solution={solution} />}
-                            <FarePanel solution={solution} onSelectionChange={handleChange} />
-                        </>
-                    ) : null}
-                    
-                    {solution.segments.length > 1 && (
-                        <>
-                            {viewMode === 'tabs' && <FarePanelTabs solution={solution} onSelectionChange={handleChange} />}
-                            {viewMode === 'accordion' && <FarePanelAccordion solution={solution} onSelectionChange={handleChange} />}
-                        </>
-                    )}
-                </div>
-            )}
-
-            {/* ── Desktop Modal Overlay ── */}
-            {showDesktopModal && solution.segments.length > 1 && (
-                <div style={{
-                    position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
-                    background: 'rgba(0,0,0,0.5)', zIndex: 9999,
-                    display: 'flex', justifyContent: 'center', alignItems: 'center',
-                    backdropFilter: 'blur(3px)'
-                }}>
-                    <div style={{
-                        background: C.surface, width: '100%', maxWidth: 700, maxHeight: '90vh',
-                        borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column',
-                        boxShadow: '0 24px 48px rgba(0,0,0,0.2)'
-                    }}>
-                        {/* Header */}
-                        <div style={{
-                            padding: '16px 20px', borderBottom: `1px solid ${C.border}`,
-                            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                            background: C.surface
-                        }}>
-                            <div>
-                                <h2 style={{ margin: 0, fontSize: 18, fontWeight: 800, color: C.text }}>Configure Journey</h2>
-                                <div style={{ fontSize: 13, color: C.textSec, marginTop: 2 }}>{city(origin)} → {city(destination)} ({duration})</div>
-                            </div>
-                            <button onClick={() => setShowDesktopModal(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}>
-                                <X style={{ width: 24, height: 24, color: C.textSec }} />
-                            </button>
-                        </div>
-                        
-                        {/* Body */}
-                        <div style={{ flex: 1, overflowY: 'auto', padding: '24px', background: C.bg }}>
-                            
-                            {/* Inner Modals Switcher (just to test both in the space) */}
-                            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
-                                <div style={{ display: 'inline-flex', background: '#E2E8F0', padding: 4, borderRadius: 8, gap: 4 }}>
-                                    {(['tabs', 'accordion'] as const).map(m => (
-                                        <button key={m} onClick={() => setModalSubView(m)} style={{
-                                            background: modalSubView === m ? '#fff' : 'transparent',
-                                            color: modalSubView === m ? C.primary : '#64748B',
-                                            border: 'none', padding: '6px 16px', borderRadius: 6,
-                                            fontWeight: 700, fontSize: 13, cursor: 'pointer', textTransform: 'capitalize',
-                                            boxShadow: modalSubView === m ? '0 1px 3px rgba(0,0,0,0.1)' : 'none'
-                                        }}>
-                                            {m} View
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {modalSubView === 'tabs' ? (
-                                <FarePanelTabs solution={solution} onSelectionChange={handleChange} />
-                            ) : (
-                                <FarePanelAccordion solution={solution} onSelectionChange={handleChange} />
-                            )}
-                        </div>
-
-                        {/* Footer */}
-                        <div style={{
-                            padding: '16px 24px', borderTop: `1px solid ${C.border}`,
-                            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                            background: C.surface
-                        }}>
-                            <div>
-                                <div style={{ fontSize: 12, color: C.textSec, fontWeight: 600 }}>Total so far</div>
-                                <div style={{ fontSize: 22, fontWeight: 800, color: hasComplete ? C.primary : C.text }}>
-                                    €{(hasComplete && totalPrice ? totalPrice : lowestPrice)?.toFixed(2)}
-                                </div>
-                            </div>
-                            <button 
-                                onClick={() => setShowDesktopModal(false)}
-                                style={{
-                                    background: hasComplete ? C.primary : '#E2E8F0', 
-                                    color: hasComplete ? '#fff' : '#64748B',
-                                    padding: '12px 32px', borderRadius: 8, fontSize: 15, fontWeight: 700,
-                                    border: 'none', cursor: 'pointer'
-                                }}
-                            >
-                                {hasComplete ? 'Done' : 'Cancel'}
-                            </button>
-                        </div>
-                    </div>
+                    {/* Journey breakdown */}
+                    <ExpandedJourneyBreakdown solution={solution} />
+                    <FarePanel solution={solution} onSelectionChange={handleChange} />
                 </div>
             )}
         </div>
