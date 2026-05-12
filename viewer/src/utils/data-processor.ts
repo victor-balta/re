@@ -84,8 +84,8 @@ function parseDuration(duration: string): number {
 export const searchId = data.id;
 export const warnings = data.warnings;
 
-export function processData(): SimplifiedLeg[] {
-    if (!data.legs) return [];
+export function normalizeRawDataToAppStructure(data: any, isRoundTrip: boolean = true) {
+    if (!data || !data.legs) return [];
 
     // 1. Group all offers by their legSolution ID
     //    map: solutionId -> RawOffer[]

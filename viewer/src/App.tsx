@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { SolutionCard } from './components/SolutionCard';
 import { MobileModal } from './components/MobileModal';
-import { ArrowRight, Train, AlertTriangle, HelpCircle, TrendingUp, Star, X, ChevronDown, ChevronUp, ChevronLeft, SlidersHorizontal, SortDesc } from 'lucide-react';
+import { SearchWidget } from './components/SearchWidget';
+import { ArrowRight, Train, AlertTriangle, HelpCircle, TrendingUp, Star, X, ChevronDown, ChevronUp, ChevronLeft, SlidersHorizontal, SortDesc, Ticket } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import { SimplifiedLeg, SimplifiedSolution, SimplifiedSegment, FormattedOffer as BaseFormattedOffer } from './utils/data-processor';
 import { CarrierBadge } from './components/FarePanel';
 import { getMultiLegMinPrice } from './components/FarePanel';
 
-interface FormattedOffer extends BaseFormattedOffer { rawName?: string; }
+interface FormattedOffer extends BaseFormattedOffer { 
+    rawName?: string;
+    originalPrice?: number;
+    railcardApplied?: boolean;
+    railcardReason?: string;
+}
 
 // ============================================
 // CONFIGURATION & TYPES
@@ -161,7 +167,7 @@ function parseFareName(name: string): ParsedFarePart[] {
     });
 }
 
-function normalizeRawDataToAppStructure(rawData: any): SimplifiedLeg[] {
+function normalizeRawDataToAppStructure(rawData: any, isRoundTrip: boolean = true): SimplifiedLeg[] {
     if (!rawData || !rawData.search || !rawData.search.outbound_leg) return [];
     const outboundLeg = rawData.search.outbound_leg;
     const legs: SimplifiedLeg[] = [];
@@ -239,52 +245,61 @@ function normalizeRawDataToAppStructure(rawData: any): SimplifiedLeg[] {
         const solutionOffers = segments.length === 1 ? segments[0].offers : [];
         return { id: `sol-${resIdx}`, departure: startTime, arrival: endTime, duration: `${Math.floor(diffMins / 60)}h ${Math.round(diffMins % 60)}m`, durationMinutes: diffMins, transfers, carriers, offers: solutionOffers, segments };
     });
-    legs.push({ id: 'leg-0', origin, destination, date, solutions });
+    const outLeg = { id: 'leg-0', origin, destination, date, solutions };
+    legs.push(outLeg);
+
+    if (isRoundTrip) {
+        const ret = JSON.parse(JSON.stringify(outLeg));
+        ret.id = `leg-1`;
+        ret.origin = destination;
+        ret.destination = origin;
+        // Mock a later date (e.g. 7 days later)
+        const retDate = new Date(new Date(date).getTime() + 7 * 24 * 60 * 60 * 1000);
+        ret.date = retDate.toISOString();
+        ret.solutions.forEach((s: any) => {
+            s.id = s.id + '-ret';
+            s.segments.forEach((seg: any) => {
+                const tempOrig = seg.origin;
+                seg.origin = seg.destination;
+                seg.destination = tempOrig;
+            });
+            s.segments.reverse();
+        });
+        legs.push(ret);
+    }
+
     return legs;
 }
 
-// ─── Minimal segmented timeline for mobile list row ─────────────────────────
 function MobileTimeline({ solution }: { solution: SimplifiedSolution }) {
     const segments = solution.segments;
     if (segments.length <= 1) {
         return (
             <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-                <div style={{ width: 5, height: 5, borderRadius: '50%', border: '2px solid #CBD5E1', flexShrink: 0 }} />
-                <div style={{ flex: 1, height: 1.5, background: 'linear-gradient(90deg, #CBD5E1, #94A3B8, #CBD5E1)' }} />
-                <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#94A3B8', flexShrink: 0 }} />
+                <div style={{ width: 6, height: 6, borderRadius: '50%', border: '1.5px solid #9CA3AF', flexShrink: 0 }} />
+                <div style={{ flex: 1, height: 2, background: '#E5E7EB' }} />
+                <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#9CA3AF', flexShrink: 0 }} />
             </div>
         );
     }
-    // Show segmented line with change-point markers
-    const changeStations = segments.slice(0, -1).map(s => s.destination.split(' ')[0]);
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, gap: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-                <div style={{ width: 5, height: 5, borderRadius: '50%', border: '2px solid #CBD5E1', flexShrink: 0 }} />
-                {segments.map((seg, idx) => (
-                    <React.Fragment key={seg.id}>
-                        <div style={{ flex: 1, height: 1.5, background: 'linear-gradient(90deg, #94A3B8, #64748B)' }} />
-                        {idx < segments.length - 1 && (
-                            <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#fff', border: '2px solid #D0105A', flexShrink: 0 }} />
-                        )}
-                    </React.Fragment>
-                ))}
-                <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#94A3B8', flexShrink: 0 }} />
-            </div>
-            {/* Change station labels */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: 0, marginTop: 3 }}>
-                {changeStations.map((city, i) => (
-                    <div key={i} style={{ fontSize: 9, color: '#D0105A', fontWeight: 700, textAlign: 'center', flex: 1 }}>
-                        {city}
-                    </div>
-                ))}
-            </div>
+        <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
+            <div style={{ width: 6, height: 6, borderRadius: '50%', border: '1.5px solid #9CA3AF', flexShrink: 0 }} />
+            {segments.map((seg, idx) => (
+                <React.Fragment key={seg.id}>
+                    <div style={{ flex: 1, height: 2, background: '#E5E7EB' }} />
+                    {idx < segments.length - 1 && (
+                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#9CA3AF', flexShrink: 0 }} />
+                    )}
+                </React.Fragment>
+            ))}
+            <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#9CA3AF', flexShrink: 0 }} />
         </div>
     );
 }
 
 // ─── Mobile trip row (tap → full-screen modal) ──────────────────────────────
-function MobileRow({ solution, onTap }: { solution: SimplifiedSolution; onTap: () => void }) {
+function MobileRow({ solution, isCheapest, onTap }: { solution: SimplifiedSolution; isCheapest?: boolean; onTap: () => void }) {
     const fmtTime = (iso: string) => { try { return format(parseISO(iso), 'HH:mm'); } catch { return iso; } };
     const origin = solution.segments[0]?.origin ?? '';
     const dest = solution.segments[solution.segments.length - 1]?.destination ?? '';
@@ -292,6 +307,8 @@ function MobileRow({ solution, onTap }: { solution: SimplifiedSolution; onTap: (
     const dur = solution.duration.replace('PT', '').replace('H', 'h ').replace('M', 'm');
     const direct = solution.transfers === 0;
     const hasChange = !direct;
+    const hasDiscount = solution.offers?.some(o => (o as any).railcardApplied) || solution.segments?.some(seg => seg.offers?.some(o => (o as any).railcardApplied));
+    const passStatus = (solution as any).passStatus;
 
     return (
         <div
@@ -308,19 +325,19 @@ function MobileRow({ solution, onTap }: { solution: SimplifiedSolution; onTap: (
             }}
         >
             {/* Row 1: dep + timeline + arr + price */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: hasChange ? 12 : 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 12 }}>
                 {/* Departure */}
                 <div style={{ flexShrink: 0 }}>
                     <div style={{ fontSize: 20, fontWeight: 800, color: '#1A1A1A', letterSpacing: '-0.5px', lineHeight: 1 }}>
                         {fmtTime(solution.departure)}
                     </div>
-                    <div style={{ fontSize: 10, color: '#9CA3AF', fontWeight: 500, marginTop: 2 }}>
+                    <div style={{ fontSize: 11, color: '#9CA3AF', fontWeight: 500, marginTop: 2 }}>
                         {origin.split(' ')[0]}
                     </div>
                 </div>
 
                 {/* Segmented timeline */}
-                <div style={{ flex: 1, padding: '0 10px', paddingBottom: hasChange ? 10 : 0 }}>
+                <div style={{ flex: 1, padding: '0 16px', display: 'flex', alignItems: 'center' }}>
                     <MobileTimeline solution={solution} />
                 </div>
 
@@ -329,16 +346,16 @@ function MobileRow({ solution, onTap }: { solution: SimplifiedSolution; onTap: (
                     <div style={{ fontSize: 20, fontWeight: 800, color: '#1A1A1A', letterSpacing: '-0.5px', lineHeight: 1 }}>
                         {fmtTime(solution.arrival)}
                     </div>
-                    <div style={{ fontSize: 10, color: '#9CA3AF', fontWeight: 500, marginTop: 2 }}>
+                    <div style={{ fontSize: 11, color: '#9CA3AF', fontWeight: 500, marginTop: 2 }}>
                         {dest.split(' ')[0]}
                     </div>
                 </div>
 
-                {/* Spacer */}
-                <div style={{ width: 1, height: 32, background: '#F0F0F0', margin: '0 12px', flexShrink: 0 }} />
-
                 {/* Price */}
-                <div style={{ flexShrink: 0, textAlign: 'right' }}>
+                <div style={{ flexShrink: 0, textAlign: 'right', marginLeft: 16 }}>
+                    {isCheapest && (
+                        <div style={{ fontSize: 9, fontWeight: 800, color: '#059669', background: '#ECFDF5', padding: '2px 6px', borderRadius: 4, display: 'inline-block', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Cheapest</div>
+                    )}
                     {price != null ? (
                         <>
                             <div style={{ fontSize: 9, color: '#9CA3AF', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>from</div>
@@ -352,27 +369,47 @@ function MobileRow({ solution, onTap }: { solution: SimplifiedSolution; onTap: (
                 </div>
             </div>
 
-            {/* Row 2: carriers + duration + transfer tag + CTA */}
+            {/* Row 2: carriers + duration + transfer tag */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap', flex: 1, minWidth: 0 }}>
-                    {solution.carriers.slice(0, 2).map((c, i) => <CarrierBadge key={i} name={c} />)}
-                    {solution.carriers.length > 2 && (
-                        <span style={{ fontSize: 10, color: '#9CA3AF' }}>+{solution.carriers.length - 2} more</span>
-                    )}
-                    <span style={{ fontSize: 11, color: '#9CA3AF' }}>{dur}</span>
-                    <span style={{
-                        fontSize: 11, fontWeight: 600,
-                        color: direct ? '#059669' : '#92400E',
-                        background: direct ? '#ECFDF5' : '#FFFBEB',
-                        borderRadius: 20, padding: '2px 7px'
-                    }}>
+                    <span style={{ fontSize: 12, color: '#6B7280', fontWeight: 600 }}>{solution.carriers.join(', ')}</span>
+                    <span style={{ fontSize: 12, color: '#D1D5DB' }}>·</span>
+                    <span style={{ fontSize: 12, color: '#6B7280', fontWeight: 600 }}>{dur}</span>
+                    <span style={{ fontSize: 12, color: '#D1D5DB' }}>·</span>
+                    <span style={{ fontSize: 12, fontWeight: 600, color: direct ? '#059669' : '#6B7280' }}>
                         {direct ? 'Direct' : `${solution.transfers} change${solution.transfers > 1 ? 's' : ''}`}
                     </span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 4, color: '#D0105A', fontSize: 12, fontWeight: 700, flexShrink: 0 }}>
-                    See fares <ArrowRight style={{ width: 13, height: 13 }} />
+                    {hasDiscount && (
+                        <>
+                            <span style={{ fontSize: 12, color: '#D1D5DB' }}>·</span>
+                            <span style={{ fontSize: 11, fontWeight: 700, color: '#059669', display: 'flex', alignItems: 'center', gap: 3, background: '#ECFDF5', padding: '2px 6px', borderRadius: 4 }}>
+                                <Ticket style={{ width: 11, height: 11 }} /> DISCOUNT APPLIED
+                            </span>
+                        </>
+                    )}
                 </div>
             </div>
+
+            {/* Row 3: Railpass Status */}
+            {passStatus && (
+                <div style={{ 
+                    marginTop: 12, 
+                    paddingTop: 10, 
+                    borderTop: '1px solid #F3F4F6', 
+                    fontSize: 12, 
+                    fontWeight: 600, 
+                    color: passStatus === 'not_applicable' ? '#D0105A' : '#059669',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 6
+                }}>
+                    <AlertTriangle style={{ width: 14, height: 14 }} />
+                    <span>
+                        {passStatus === 'not_applicable' ? "Rail Pass doesn't apply for this trip. " : "Seat reservation is required. "}
+                        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>More info</span>
+                    </span>
+                </div>
+            )}
         </div>
     );
 }
@@ -380,7 +417,7 @@ function MobileRow({ solution, onTap }: { solution: SimplifiedSolution; onTap: (
 // ─────────────────────────────────────────────────────────────────────────────
 // MAIN APP COMPONENT
 // ─────────────────────────────────────────────────────────────────────────────
-export default function App() {
+export default function App({ forcedViewMode, showHorizontalSearch }: { forcedViewMode?: 'stacked' | 'tabs' | 'accordion' | 'modal'; showHorizontalSearch?: boolean }) {
     const [selectedDatasetId, setSelectedDatasetId] = useState(() => {
         const stored = localStorage.getItem('rail-era-dataset');
         // Validate stored value is a known dataset, otherwise default
@@ -406,7 +443,12 @@ export default function App() {
     const [mobileModalSel, setMobileModalSel] = useState<{ price: number | null; complete: boolean }>({ price: null, complete: false });
 
     // Global View Mode
-    const [viewMode, setViewMode] = useState<'stacked' | 'tabs' | 'accordion' | 'modal'>('tabs');
+    const [viewMode, setViewMode] = useState<'stacked' | 'tabs' | 'accordion' | 'modal'>(forcedViewMode || 'tabs');
+
+    // SearchWidget State
+    const [railcard, setRailcard] = useState<string | null>(null);
+    const [railpass, setRailpass] = useState<string | null>(null);
+    const [isRoundTrip, setIsRoundTrip] = useState<boolean>(true);
 
     // Clear any stale #/night-train hash on mount
     useEffect(() => {
@@ -421,13 +463,69 @@ export default function App() {
             try {
                 const res = await fetch(`/${selectedDatasetId}`);
                 if (!res.ok) throw new Error(`Failed to load ${selectedDatasetId}`);
-                setData(normalizeRawDataToAppStructure(await res.json()));
+                setData(normalizeRawDataToAppStructure(await res.json(), isRoundTrip));
                 setCartSelections({}); setSelectedLegIndex(0); setFilterDirect(false); setSortBy('departure');
             } catch (e: any) { console.error(e); setError(e.message); setData([]); }
             finally { setLoading(false); }
         }
         load();
-    }, [selectedDatasetId]);
+    }, [selectedDatasetId, isRoundTrip]);
+
+    const processedData = React.useMemo(() => {
+        if (!railcard && !railpass) return data;
+        const cloned = JSON.parse(JSON.stringify(data)) as SimplifiedLeg[];
+        
+        const applyRailcardDiscount = (offer: FormattedOffer) => {
+            if (offer.originalPrice == null) {
+                offer.originalPrice = offer.price;
+            }
+            
+            if (offer.comfort === 'First' || offer.provider === 'TGV') {
+                offer.railcardApplied = false;
+                offer.railcardReason = 'Not valid on this class/carrier';
+                return;
+            }
+            
+            offer.price = Number((offer.originalPrice * 0.67).toFixed(2));
+            offer.railcardApplied = true;
+        };
+
+        const applyRailpassDiscount = (offer: FormattedOffer) => {
+            if (offer.originalPrice == null) {
+                offer.originalPrice = offer.price;
+            }
+            // Mock: Eurostar or TGV -> reservation required (e.g. 10 EUR). Others -> not applicable.
+            if (offer.provider === 'Eurostar' || offer.provider === 'TGV') {
+                offer.price = 10.00;
+            }
+        };
+
+        cloned.forEach(leg => {
+            leg.solutions.forEach((sol: any) => {
+                if (railpass) {
+                    // Mock Pass Status at solution level based on carriers
+                    if (sol.carriers.includes('Eurostar') || sol.carriers.includes('TGV')) {
+                        sol.passStatus = 'reservation_required';
+                    } else {
+                        sol.passStatus = 'not_applicable';
+                    }
+                }
+
+                sol.offers?.forEach((offer: FormattedOffer) => {
+                    if (railcard) applyRailcardDiscount(offer);
+                    if (railpass && sol.passStatus === 'reservation_required') applyRailpassDiscount(offer);
+                });
+                sol.segments?.forEach((seg: any) => {
+                    seg.offers?.forEach((offer: FormattedOffer) => {
+                        if (railcard) applyRailcardDiscount(offer);
+                        if (railpass && sol.passStatus === 'reservation_required') applyRailpassDiscount(offer);
+                    });
+                });
+            });
+        });
+        
+        return cloned;
+    }, [data, railcard, railpass]);
 
     const handleSelectionChange = (solutionId: string, totalPrice: number | null, hasCompleteSelection: boolean) => {
         setCartSelections(prev => ({ ...prev, [`leg-${selectedLegIndex}`]: { legIndex: selectedLegIndex, solutionId, totalPrice, hasCompleteSelection } }));
@@ -436,15 +534,16 @@ export default function App() {
     const grandTotal = Object.values(cartSelections).reduce((s, c) => s + (c.totalPrice || 0), 0);
     const bookingFee = 0;
     const hasAnyComplete = Object.values(cartSelections).some(s => s.hasCompleteSelection);
+    const allComplete = processedData.length > 0 && processedData.every((leg, idx) => cartSelections[`leg-${idx}`]?.hasCompleteSelection);
     const fmtTime = (iso: string) => { try { return format(parseISO(iso), 'HH:mm'); } catch { return iso; } };
 
     // Early returns
     const cs: React.CSSProperties = { display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center', fontFamily: "'DM Sans',sans-serif", fontSize: 14 };
     if (loading) return <div style={cs}><span style={{ color: '#888' }}>Loading dataset…</span></div>;
     if (error) return <div style={cs}><span style={{ color: '#D0105A' }}>Error: {error}</span></div>;
-    if (!data.length) return <div style={cs}><span style={{ color: '#888' }}>No data available.</span></div>;
+    if (!processedData.length) return <div style={cs}><span style={{ color: '#888' }}>No data available.</span></div>;
 
-    const currentLeg = data[selectedLegIndex];
+    const currentLeg = processedData[selectedLegIndex];
 
     // Filter + Sort
     let filtered = currentLeg.solutions.filter(s => !filterDirect || s.transfers === 0);
@@ -542,7 +641,7 @@ export default function App() {
                         <select value={selectedDatasetId} className="re-select"
                             onChange={e => {
                                 const v = e.target.value;
-                                localStorage.setItem('rail-era-dataset', v);
+                                localStorage.setItem('rail-era-processedDataset', v);
                                 setSelectedDatasetId(v);
                             }}
                             style={{ fontSize: 13, border: '1.5px solid #E5E5E5', borderRadius: 8, padding: '5px 8px', color: '#1A1A1A', background: '#fff', cursor: 'pointer', minWidth: 0 }}>
@@ -551,20 +650,27 @@ export default function App() {
                     </div>
                     <div className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                         {/* Switcher */}
-                        <div style={{ display: 'flex', gap: 4, background: '#F1F5F9', padding: 4, borderRadius: 8 }}>
-                            {(['stacked', 'tabs', 'accordion', 'modal'] as const).map(mode => (
-                                <button key={mode} onClick={() => setViewMode(mode)} style={{
-                                    background: viewMode === mode ? '#fff' : 'transparent',
-                                    border: 'none',
-                                    boxShadow: viewMode === mode ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                                    borderRadius: 6, padding: '4px 10px', fontSize: 11, fontWeight: 700, cursor: 'pointer',
-                                    color: viewMode === mode ? '#D0105A' : '#64748B', textTransform: 'capitalize',
-                                    transition: 'all 0.15s'
-                                }}>
-                                    {mode}
-                                </button>
-                            ))}
-                        </div>
+                        {!forcedViewMode && (
+                            <div style={{ display: 'flex', gap: 4, background: '#F1F5F9', padding: 4, borderRadius: 8 }}>
+                                {(['stacked', 'tabs', 'accordion', 'modal'] as const).map(mode => (
+                                    <button key={mode} onClick={() => setViewMode(mode)} style={{
+                                        background: viewMode === mode ? '#fff' : 'transparent',
+                                        border: 'none',
+                                        boxShadow: viewMode === mode ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                                        borderRadius: 6, padding: '4px 10px', fontSize: 11, fontWeight: 700, cursor: 'pointer',
+                                        color: viewMode === mode ? '#D0105A' : '#64748B', textTransform: 'capitalize',
+                                        transition: 'all 0.15s'
+                                    }}>
+                                        {mode}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                        {forcedViewMode ? (
+                            <a href="#/original" style={{ fontSize: 13, fontWeight: 600, color: '#D0105A', textDecoration: 'none', background: '#FFF0F5', padding: '6px 10px', borderRadius: 6 }}>Original UI</a>
+                        ) : (
+                            <a href="#/" style={{ fontSize: 13, fontWeight: 600, color: '#D0105A', textDecoration: 'none', background: '#FFF0F5', padding: '6px 10px', borderRadius: 6 }}>Tabs Sandbox</a>
+                        )}
                         <div style={{ fontSize: 11, color: '#888', background: '#F5F5F3', padding: '3px 8px', borderRadius: 5, fontFamily: 'monospace', whiteSpace: 'nowrap', flexShrink: 0 }}>{selectedDatasetId}</div>
                     </div>
                 </div>
@@ -574,9 +680,25 @@ export default function App() {
             <div className="re-main">
 
                 {/* Back button */}
-                <div style={{ marginBottom: 14, display: 'flex', alignItems: 'center', gap: 6, color: '#1A1A1A', fontSize: 13, fontWeight: 600, cursor: 'pointer' }}>
+                <div style={{ marginBottom: showHorizontalSearch ? 16 : 14, display: 'flex', alignItems: 'center', gap: 6, color: '#1A1A1A', fontSize: 13, fontWeight: 600, cursor: 'pointer' }}>
                     <ChevronLeft style={{ width: 16, height: 16 }} /> Back to search
                 </div>
+
+                {/* ── Search Widget ── */}
+                {showHorizontalSearch && (
+                    <div style={{ marginBottom: 30 }}>
+                        <SearchWidget 
+                            defaultOrigin={processedData[0]?.origin?.split(' ')[0] || 'Origin'} 
+                            defaultDest={processedData[0]?.destination?.split(' ')[0] || 'Destination'} 
+                            railcard={railcard}
+                            railpass={railpass}
+                            isRoundTrip={isRoundTrip}
+                            onRailcardChange={setRailcard}
+                            onRailpassChange={setRailpass}
+                            onToggleRoundTrip={setIsRoundTrip}
+                        />
+                    </div>
+                )}
 
                 {/* ── Filter bar ── */}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, gap: 8, flexWrap: 'wrap', position: 'relative', zIndex: 10 }}>
@@ -620,30 +742,61 @@ export default function App() {
                     </div>
                 </div>
 
-                {/* ── Direction tabs (card style, matching screenshot) ── */}
-                {data.length > 1 && (
-                    <div className="dir-tabs" style={{ marginBottom: 20 }}>
-                        {data.map((leg, idx) => {
-                            const active = selectedLegIndex === idx;
-                            const legLabel = data.length === 2 ? (idx === 0 ? 'Outbound' : 'Return') : `Leg ${idx + 1}`;
-                            const sold = cartSelections[`leg-${idx}`];
-                            return (
-                                <button key={leg.id} className={`dir-tab ${active ? 'active' : ''}`}
-                                    onClick={() => setSelectedLegIndex(idx)}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 3 }}>
-                                        <Train style={{ width: 13, height: 13, color: active ? '#D0105A' : '#888' }} />
-                                        <span style={{ fontSize: 14, fontWeight: 700, color: active ? '#D0105A' : '#1A1A1A' }}>
+                {/* ── Journey Stepper & Summaries ── */}
+                {processedData.length > 1 && (
+                    <div style={{ marginBottom: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
+                        {processedData.map((leg, idx) => {
+                            const isPast = idx < selectedLegIndex;
+                            const isCurrent = idx === selectedLegIndex;
+                            const isFuture = idx > selectedLegIndex;
+                            const legLabel = processedData.length === 2 ? (idx === 0 ? 'Outbound' : 'Return') : `Leg ${idx + 1}`;
+                            const sel = cartSelections[`leg-${idx}`];
+                            const sol = sel ? leg.solutions.find(s => s.id === sel.solutionId) : null;
+
+                            if (isFuture) return null; // Hide future steps until reached
+
+                            if (isPast && sol) {
+                                // Summary card for completed step
+                                return (
+                                    <div key={leg.id} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                        <div>
+                                            <div style={{ fontSize: 12, fontWeight: 700, color: '#64748B', textTransform: 'uppercase', marginBottom: 4, display: 'flex', alignItems: 'center', gap: 6 }}>
+                                                <div style={{ width: 16, height: 16, background: '#10B981', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10 }}>✓</div>
+                                                {legLabel} Selected
+                                            </div>
+                                            <div style={{ fontSize: 15, fontWeight: 700, color: '#0F172A' }}>
+                                                {leg.origin.split(' ')[0]} → {leg.destination.split(' ')[0]}
+                                            </div>
+                                            <div style={{ fontSize: 13, color: '#475569', marginTop: 4, display: 'flex', alignItems: 'center', gap: 8 }}>
+                                                <span>{format(parseISO(sol.departure), 'EEE d MMM, HH:mm')}</span>
+                                                <span style={{ width: 4, height: 4, background: '#CBD5E1', borderRadius: '50%' }} />
+                                                <span style={{ fontWeight: 600 }}>€{sel.totalPrice?.toFixed(2)}</span>
+                                            </div>
+                                        </div>
+                                        <button onClick={() => setSelectedLegIndex(idx)} style={{ background: '#fff', border: '1px solid #E2E8F0', color: '#0F172A', padding: '6px 14px', borderRadius: 50, fontSize: 13, fontWeight: 600, cursor: 'pointer' }}>
+                                            Edit
+                                        </button>
+                                    </div>
+                                );
+                            }
+
+                            if (isCurrent) {
+                                // Header for current step
+                                return (
+                                    <div key={leg.id} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '4px 0 8px' }}>
+                                        <div style={{ width: 24, height: 24, background: '#D0105A', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700 }}>
+                                            {idx + 1}
+                                        </div>
+                                        <div style={{ fontSize: 18, fontWeight: 800, color: '#1A1A1A' }}>
+                                            Select {legLabel}
+                                        </div>
+                                        <div style={{ fontSize: 14, color: '#64748B', marginLeft: 'auto', fontWeight: 500 }}>
                                             {leg.origin.split(' ')[0]} → {leg.destination.split(' ')[0]}
-                                        </span>
-                                        {sold?.hasCompleteSelection && (
-                                            <span style={{ marginLeft: 'auto', fontSize: 12, fontWeight: 700, color: '#D0105A' }}>€{sold.totalPrice?.toFixed(2)}</span>
-                                        )}
+                                        </div>
                                     </div>
-                                    <div style={{ fontSize: 11, color: '#888' }}>
-                                        {legLabel} · {format(parseISO(leg.date), 'EEE d MMM, h:mmaaa')}
-                                    </div>
-                                </button>
-                            );
+                                );
+                            }
+                            return null;
                         })}
                     </div>
                 )}
@@ -677,18 +830,26 @@ export default function App() {
                             </div>
                         ) : (
                             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                                {filtered.map(solution => (
-                                    <div key={solution.id}>
-                                        {/* Desktop: inline expand */}
-                                        <div className="sol-desktop">
-                                            <SolutionCard solution={solution} onSelectionChange={handleSelectionChange} viewMode={viewMode} />
-                                        </div>
-                                        {/* Mobile: tap → modal */}
-                                        <div className="sol-mobile">
-                                            <MobileRow solution={solution} onTap={() => { setMobileModalSolution(solution); setMobileModalSel({ price: null, complete: false }); }} />
-                                        </div>
-                                    </div>
-                                ))}
+                                {(() => {
+                                    const validPrices = filtered.map(s => getMultiLegMinPrice(s)).filter((p): p is number => p != null);
+                                    const minPrice = validPrices.length > 0 ? Math.min(...validPrices) : -1;
+                                    return filtered.map(solution => {
+                                        const solPrice = getMultiLegMinPrice(solution);
+                                        const isCheapest = solPrice != null && solPrice === minPrice;
+                                        return (
+                                            <div key={solution.id}>
+                                                {/* Desktop: inline expand */}
+                                                <div className="sol-desktop">
+                                                    <SolutionCard solution={solution} onSelectionChange={handleSelectionChange} viewMode={viewMode} railcard={railcard} railpass={railpass} />
+                                                </div>
+                                                {/* Mobile: tap → modal */}
+                                                <div className="sol-mobile">
+                                                    <MobileRow solution={solution} isCheapest={isCheapest} onTap={() => { setMobileModalSolution(solution); setMobileModalSel({ price: null, complete: false }); }} />
+                                                </div>
+                                            </div>
+                                        );
+                                    });
+                                })()}
                             </div>
                         )}
                     </div>
@@ -728,15 +889,25 @@ export default function App() {
 
                                 {/* CTA */}
                                 <div style={{ padding: '0 20px 16px' }}>
-                                    <button onClick={() => setShowUpgradeModal(true)}
-                                        style={{ width: '100%', borderRadius: 50, padding: '13px 0', fontSize: 14, fontWeight: 700, border: 'none', cursor: hasAnyComplete ? 'pointer' : 'not-allowed', background: hasAnyComplete ? '#D0105A' : '#E5E5E5', color: hasAnyComplete ? '#fff' : '#AAA', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, transition: 'background 0.2s' }}>
-                                        {hasAnyComplete ? 'Continue' : 'Select a fare'}
-                                        {hasAnyComplete && <ArrowRight style={{ width: 16, height: 16 }} />}
+                                    <button onClick={() => {
+                                        if (allComplete) {
+                                            setShowUpgradeModal(true);
+                                        } else {
+                                            const nextIdx = processedData.findIndex((l, i) => !cartSelections[`leg-${i}`]?.hasCompleteSelection);
+                                            if (nextIdx !== -1) {
+                                                setSelectedLegIndex(nextIdx);
+                                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                                            }
+                                        }
+                                    }}
+                                        style={{ width: '100%', borderRadius: 50, padding: '13px 0', fontSize: 14, fontWeight: 700, border: 'none', cursor: (hasAnyComplete || allComplete) ? 'pointer' : 'not-allowed', background: (hasAnyComplete || allComplete) ? '#D0105A' : '#E5E5E5', color: (hasAnyComplete || allComplete) ? '#fff' : '#AAA', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, transition: 'background 0.2s' }}>
+                                        {allComplete ? 'Continue' : (cartSelections[`leg-${selectedLegIndex}`]?.hasCompleteSelection ? 'Select Return' : 'Select a fare')}
+                                        {(hasAnyComplete || allComplete) && <ArrowRight style={{ width: 16, height: 16 }} />}
                                     </button>
                                 </div>
 
                                 {/* Journey summary per leg */}
-                                {data.map((leg, idx) => {
+                                {processedData.map((leg, idx) => {
                                     const sel = cartSelections[`leg-${idx}`];
                                     const sol = sel ? leg.solutions.find(s => s.id === sel.solutionId) : null;
                                     return (
@@ -826,7 +997,19 @@ export default function App() {
                     }}
                     hasCompleteSelection={mobileModalSel.complete}
                     totalPrice={mobileModalSel.price}
-                    onContinue={() => { setMobileModalSolution(null); setShowUpgradeModal(true); }}
+                    continueLabel={allComplete ? 'Continue' : 'Select return'}
+                    onContinue={() => { 
+                        setMobileModalSolution(null); 
+                        if (allComplete) {
+                            setShowUpgradeModal(true); 
+                        } else {
+                            const nextIdx = processedData.findIndex((l, i) => !cartSelections[`leg-${i}`]?.hasCompleteSelection);
+                            if (nextIdx !== -1) {
+                                setSelectedLegIndex(nextIdx);
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }
+                        }
+                    }}
                 />
             )}
 

@@ -140,7 +140,7 @@ function parseFareName(name: string): ParsedFarePart[] {
     });
 }
 
-function normalizeRawDataToAppStructure(rawData: any): SimplifiedLeg[] {
+export function normalizeRawDataToAppStructure(rawData: any): SimplifiedLeg[] {
     if (!rawData || !rawData.search || !rawData.search.outbound_leg) return [];
     const outboundLeg = rawData.search.outbound_leg;
     const legs: SimplifiedLeg[] = [];
@@ -525,7 +525,10 @@ export default function App() {
                             {DATASETS.map(d => <option key={d.id} value={d.id}>{d.label}</option>)}
                         </select>
                     </div>
-                    <div className="desktop-only" style={{ fontSize: 11, color: '#888', background: '#F5F5F3', padding: '3px 8px', borderRadius: 5, fontFamily: 'monospace', whiteSpace: 'nowrap', flexShrink: 0 }}>{selectedDatasetId}</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                        <a href="#/tabs" style={{ fontSize: 13, fontWeight: 600, color: '#D0105A', textDecoration: 'none' }}>Tabs Sandbox</a>
+                        <div className="desktop-only" style={{ fontSize: 11, color: '#888', background: '#F5F5F3', padding: '3px 8px', borderRadius: 5, fontFamily: 'monospace', whiteSpace: 'nowrap', flexShrink: 0 }}>{selectedDatasetId}</div>
+                    </div>
                 </div>
             </header>
 

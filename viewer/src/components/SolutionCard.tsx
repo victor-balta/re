@@ -22,6 +22,8 @@ interface SolutionCardProps {
     solution: SimplifiedSolution;
     onSelectionChange?: (solutionId: string, totalPrice: number | null, hasCompleteSelection: boolean) => void;
     viewMode?: 'stacked' | 'tabs' | 'accordion' | 'modal';
+    railcard?: string | null;
+    railpass?: string | null;
 }
 
 // small pill for direct / N changes
@@ -211,7 +213,7 @@ function ExpandedJourneyBreakdown({ solution }: { solution: SimplifiedSolution }
 
 import { X } from 'lucide-react';
 
-export function SolutionCard({ solution, onSelectionChange, viewMode = 'tabs' }: SolutionCardProps) {
+export function SolutionCard({ solution, onSelectionChange, viewMode = 'tabs', railcard, railpass }: SolutionCardProps) {
     const [expanded, setExpanded] = useState(false);
     const [showDesktopModal, setShowDesktopModal] = useState(false);
     const [modalSubView, setModalSubView] = useState<'tabs' | 'accordion'>('tabs');
@@ -307,11 +309,62 @@ export function SolutionCard({ solution, onSelectionChange, viewMode = 'tabs' }:
                     </div>
                 </div>
 
-                {/* PRICE */}
+                {/* PRICE & RAILPASS / RAILCARD MOCK STATES */}
                 <div style={{ textAlign: 'right', paddingLeft: 20 }}>
-                    {lowestPrice !== null ? (
+                    {railpass ? (
+                        /* MOCK RAILPASS STATES based on solution ID / index */
+                        (() => {
+                            const hash = solution.id.charCodeAt(solution.id.length - 1) % 4; // Mock 4 states
+                            if (hash === 0) {
+                                return (
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                                            <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#059669' }} />
+                                            <div style={{ fontSize: 18, fontWeight: 800, color: '#059669' }}>FREE</div>
+                                        </div>
+                                        <div style={{ fontSize: 11, color: C.textSec, textAlign: 'right', maxWidth: 160 }}>Seat reservation is not required. <a href="#" style={{ color: C.primary }}>More info</a></div>
+                                    </div>
+                                );
+                            } else if (hash === 1) {
+                                return (
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                                            <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#059669' }} />
+                                            <div style={{ fontSize: 11, color: C.textSec, textTransform: 'uppercase' }}>from</div>
+                                            <div style={{ fontSize: 18, fontWeight: 800, color: C.text }}>€36.00</div>
+                                        </div>
+                                        <div style={{ fontSize: 11, color: C.textSec, textAlign: 'right', maxWidth: 160 }}>Seat reservation is required. <a href="#" style={{ color: C.primary }}>More info</a></div>
+                                    </div>
+                                );
+                            } else if (hash === 2) {
+                                return (
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                                            <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#DC2626' }} />
+                                            <div style={{ fontSize: 11, color: C.textSec, textTransform: 'uppercase' }}>from</div>
+                                            <div style={{ fontSize: 18, fontWeight: 800, color: C.text }}>€134.00</div>
+                                        </div>
+                                        <div style={{ fontSize: 11, color: C.textSec, textAlign: 'right', maxWidth: 160 }}>Rail Pass doesn't apply for this trip. <a href="#" style={{ color: C.primary }}>More info</a></div>
+                                    </div>
+                                );
+                            } else {
+                                return (
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                                            <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#DC2626' }} />
+                                            <div style={{ fontSize: 14, fontWeight: 700, color: C.text }}>Not possible</div>
+                                        </div>
+                                        <div style={{ fontSize: 11, color: C.textSec, textAlign: 'right', maxWidth: 160 }}>Reservation is not possible for the whole journey. Please split your search. <a href="#" style={{ color: C.primary }}>More info</a></div>
+                                    </div>
+                                );
+                            }
+                        })()
+                    ) : lowestPrice !== null ? (
                         <>
-                            <div style={{ fontSize: 10, color: C.textSec, fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.5px' }}>from</div>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 6 }}>
+                                {railcard && <div style={{ background: '#FFF0F5', color: '#D0105A', padding: '2px 6px', borderRadius: 4, fontSize: 9, fontWeight: 700, textTransform: 'uppercase' }}>{railcard} applied</div>}
+                                <div style={{ fontSize: 10, color: C.textSec, fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.5px' }}>from</div>
+                            </div>
                             <div className="re-price" style={{ fontSize: 20, fontWeight: 800, color: hasComplete ? C.primary : C.text, letterSpacing: '-0.4px', lineHeight: 1.1 }}>
                                 €{(hasComplete && totalPrice ? totalPrice : lowestPrice).toFixed(2)}
                             </div>

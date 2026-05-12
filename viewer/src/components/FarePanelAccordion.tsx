@@ -40,6 +40,12 @@ function FlexTag({ flexibility }: { flexibility: string }) {
     return <span style={{ fontSize: 11, color, fontWeight: 500 }}>{flexibility}</span>;
 }
 
+function getConditions(flex: string) {
+    if (flex.includes('Fully') || flex.includes('High')) return 'Ticket can be exchanged or refunded without a fee up to 1 day before departure.';
+    if (flex.includes('Semi') || flex.includes('Mid')) return 'Ticket can be exchanged for a fee. Non-refundable.';
+    return 'Ticket is strictly non-refundable and cannot be exchanged.';
+}
+
 export interface FarePanelProps {
     solution: SimplifiedSolution;
     onSelectionChange?: (solutionId: string, totalPrice: number | null, hasCompleteSelection: boolean) => void;
@@ -87,14 +93,6 @@ export function FarePanelAccordion({ solution, onSelectionChange }: FarePanelPro
 
     const handleSelectFlexibility = (segId: string, offerId: string) => {
         setSegmentSelections(p => ({ ...p, [segId]: { ...p[segId], flexibility: offerId } }));
-        const idx = solution.segments.findIndex(s => s.id === segId);
-        setTimeout(() => {
-            if (idx + 1 < solution.segments.length) {
-                setActiveSegId(solution.segments[idx + 1].id);
-            } else {
-                setActiveSegId(null);
-            }
-        }, 150);
     };
 
     if (solution.segments.length <= 1) return <div>Single leg fallback in accordion.</div>;
@@ -152,29 +150,33 @@ export function FarePanelAccordion({ solution, onSelectionChange }: FarePanelPro
                                         {sortClasses(Object.keys(groupByClass(seg.offers))).length > 2 && <div style={{ fontSize: 10, color: C.textSec, fontStyle: 'italic' }}>Swipe for more →</div>}
                                     </div>
                                     <div style={{ position: 'relative' }}>
-                                        <div className="re-class-scroll" style={{ display: 'flex', gap: 10, marginBottom: 18, paddingBottom: 4 }}>
+                                        <div className="re-class-scroll" style={{ display: 'flex', gap: 10, marginBottom: 24, paddingBottom: 4 }}>
                                             {sortClasses(Object.keys(groupByClass(seg.offers))).map(cls => {
                                                 const isSel = sel?.class === cls;
-                                                const profile = getClassProfile(seg.carrier, cls);
+                                                const lowestPrice = getLowest(cls, seg.offers);
                                                 return (
-                                                    <label key={cls} style={{ border: `2px solid ${isSel ? C.primary : C.borderInput}`, background: isSel ? C.primaryLight : C.surface, borderRadius: 9, padding: '12px 14px', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: 6, minWidth: 160, flex: '0 0 auto', transition: 'border-color 0.15s, background 0.15s' }}>
+                                                    <label key={cls} style={{
+                                                        border: `1.5px solid ${isSel ? C.primary : C.borderInput}`, 
+                                                        background: isSel ? C.primaryLight : C.surface, 
+                                                        borderRadius: 12, 
+                                                        padding: '10px 16px', 
+                                                        cursor: 'pointer', 
+                                                        display: 'flex', 
+                                                        flexDirection: 'column',
+                                                        alignItems: 'flex-start',
+                                                        justifyContent: 'center',
+                                                        gap: 4, 
+                                                        minWidth: 100,
+                                                        flex: '0 0 auto', 
+                                                        transition: 'border-color 0.15s, background 0.15s',
+                                                        boxShadow: isSel ? '0 2px 6px rgba(208,16,90,0.1)' : 'none'
+                                                    }}>
                                                         <input type="radio" checked={isSel} onChange={() => setSegmentSelections(p => ({ ...p, [seg.id]: { class: cls, flexibility: null } }))} style={{ display: 'none' }} />
-                                                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><RadioDot selected={isSel} /> <span style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{cls}</span></div>
-                                                        {profile?.description && (
-                                                            <div style={{ fontSize: 10, color: isSel ? '#9D1345' : C.textSec, paddingLeft: 25, lineHeight: 1.3 }}>{profile.description}</div>
-                                                        )}
-                                                        <div style={{ fontSize: 12, color: isSel ? C.primary : C.textSec, paddingLeft: 25, fontWeight: 700 }}>From €{getLowest(cls, seg.offers)?.toFixed(2)}</div>
-                                                        
-                                                        {profile?.amenities && profile.amenities.length > 0 && (
-                                                            <div style={{ paddingLeft: 2, marginTop: 4, display: 'flex', flexDirection: 'column', gap: 4 }}>
-                                                                <div style={{ width: '100%', height: 1, background: isSel ? 'rgba(208,16,90,0.15)' : '#F0F0F0', margin: '2px 0 4px' }} />
-                                                                {profile.amenities.slice(0, 4).map((am, idx) => (
-                                                                    <div key={idx} style={{ fontSize: 10, color: am.highlight ? (isSel ? '#9D1345' : '#374151') : '#64748B', display: 'flex', alignItems: 'center', gap: 5, fontWeight: am.highlight ? 600 : 400 }}>
-                                                                        <span style={{ fontSize: 12 }}>{am.icon}</span> {am.label}
-                                                                    </div>
-                                                                ))}
-                                                                {profile.amenities.length > 4 && <div style={{ fontSize: 10, color: '#94A3B8', paddingLeft: 17 }}>+{profile.amenities.length - 4} more</div>}
-                                                            </div>
+                                                        <span style={{ fontSize: 13, fontWeight: 700, color: isSel ? C.primary : C.text }}>{cls}</span>
+                                                        {lowestPrice !== null && (
+                                                            <span style={{ fontSize: 12, fontWeight: 600, color: isSel ? C.primary : C.textSec }}>
+                                                                from €{lowestPrice.toFixed(2)}
+                                                            </span>
                                                         )}
                                                     </label>
                                                 );
@@ -191,20 +193,39 @@ export function FarePanelAccordion({ solution, onSelectionChange }: FarePanelPro
                                                 {(groupByClass(seg.offers)[sel.class] ?? []).map(offer => {
                                                     const isSel = sel.flexibility === offer.id;
                                                     return (
-                                                        <label key={offer.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: `2px solid ${isSel ? C.primary : C.borderInput}`, background: isSel ? C.primaryLight : C.surface, borderRadius: 9, padding: '11px 14px', cursor: 'pointer' }}>
-                                                            <input type="radio" checked={isSel} onChange={() => handleSelectFlexibility(seg.id, offer.id)} style={{ display: 'none' }} />
-                                                            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                                                                <RadioDot selected={isSel} />
-                                                                <div>
-                                                                    <div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{offer.tariffName || 'Standard'}</div>
-                                                                    <FlexTag flexibility={offer.flexibility} />
+                                                        <label key={offer.id} style={{ display: 'flex', flexDirection: 'column', border: `2px solid ${isSel ? C.primary : C.borderInput}`, background: isSel ? C.primaryLight : C.surface, borderRadius: 9, padding: '11px 14px', cursor: 'pointer' }}>
+                                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                                <input type="radio" checked={isSel} onChange={() => handleSelectFlexibility(seg.id, offer.id)} style={{ display: 'none' }} />
+                                                                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                                                                    <RadioDot selected={isSel} />
+                                                                    <div>
+                                                                        <div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{offer.tariffName || 'Standard'}</div>
+                                                                        <FlexTag flexibility={offer.flexibility} />
+                                                                    </div>
                                                                 </div>
+                                                                <div style={{ fontSize: 15, fontWeight: 700, color: isSel ? C.primary : C.text }}>€{offer.price.toFixed(2)}</div>
                                                             </div>
-                                                            <div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>€{offer.price.toFixed(2)}</div>
+                                                            {isSel && (
+                                                                <div style={{ marginTop: 8, paddingLeft: 27, fontSize: 12, color: C.textSec, lineHeight: 1.4 }}>
+                                                                    {getConditions(offer.flexibility)}
+                                                                </div>
+                                                            )}
                                                         </label>
                                                     );
                                                 })}
                                             </div>
+                                        </div>
+                                    )}
+
+                                    {/* Next Leg Button */}
+                                    {isCompleted && i < solution.segments.length - 1 && (
+                                        <div style={{ marginTop: 24 }}>
+                                            <button 
+                                                onClick={(e) => { e.stopPropagation(); setActiveSegId(solution.segments[i + 1].id); }}
+                                                style={{ width: '100%', background: '#fff', color: C.primary, border: `1.5px solid ${C.primary}`, borderRadius: 50, padding: '12px 0', fontSize: 14, fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}
+                                            >
+                                                Continue to Next Leg
+                                            </button>
                                         </div>
                                     )}
                                 </div>

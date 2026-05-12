@@ -47,6 +47,12 @@ function FlexTag({ flexibility }: { flexibility: string }) {
     return <span style={{ fontSize: 11, color, fontWeight: 500 }}>{flexibility}</span>;
 }
 
+function getConditions(flex: string) {
+    if (flex.includes('Fully') || flex.includes('High')) return 'Ticket can be exchanged or refunded without a fee up to 1 day before departure.';
+    if (flex.includes('Semi') || flex.includes('Mid')) return 'Ticket can be exchanged for a fee. Non-refundable.';
+    return 'Ticket is strictly non-refundable and cannot be exchanged.';
+}
+
 export interface FarePanelProps {
     solution: SimplifiedSolution;
     onSelectionChange?: (solutionId: string, totalPrice: number | null, hasCompleteSelection: boolean) => void;
@@ -117,61 +123,69 @@ export function FarePanelTabs({ solution, onSelectionChange }: FarePanelProps) {
 
     return (
         <div>
-            {/* Horizontal Tabs */}
-            <div className="re-class-scroll" style={{ display: 'flex', gap: 8, marginBottom: 20, borderBottom: `2px solid ${C.borderInput}`, paddingBottom: 8 }}>
+            {/* Segmented Control Tabs */}
+            <div style={{ display: 'flex', background: '#F5F5F5', padding: 4, borderRadius: 100, marginBottom: 24 }}>
                 {solution.segments.map((seg, i) => {
                     const isCompleted = segmentSelections[seg.id]?.flexibility != null;
                     const isActive = i === activeTab;
                     return (
                         <button key={seg.id} onClick={() => setActiveTab(i)} style={{
-                            padding: '8px 12px', borderRadius: 8, cursor: 'pointer', border: 'none',
-                            background: isActive ? C.primary : isCompleted ? C.successLight : C.surfaceAlt,
-                            color: isActive ? '#fff' : isCompleted ? C.success : C.textSec,
-                            fontWeight: isActive ? 700 : 600, fontSize: 13,
-                            display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap'
+                            flex: 1, padding: '10px', borderRadius: 100, cursor: 'pointer', border: 'none',
+                            background: isActive ? '#fff' : 'transparent',
+                            color: isActive ? C.text : C.textSec,
+                            boxShadow: isActive ? '0 2px 8px rgba(0,0,0,0.1)' : 'none',
+                            fontWeight: isActive ? 700 : 600, fontSize: 13, transition: 'all 0.2s',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6
                         }}>
-                            {isCompleted && !isActive && <CheckCircle2 style={{ width: 14, height: 14 }} />}
-                            {i + 1}. {seg.origin.split(' ')[0]} → {seg.destination.split(' ')[0]}
+                            {isCompleted && !isActive && <CheckCircle2 style={{ width: 14, height: 14, color: C.success }} />}
+                            Leg {i + 1}
                         </button>
                     );
                 })}
             </div>
 
+            {/* Active Tab Header */}
+            <div style={{ textAlign: 'center', marginBottom: 24 }}>
+                <div style={{ fontSize: 22, fontWeight: 800, color: C.text, letterSpacing: '-0.5px' }}>
+                    {currentSeg.origin.split(' ')[0]} &gt; {currentSeg.destination.split(' ')[0]}
+                </div>
+                <div style={{ fontSize: 14, color: C.textSec, marginTop: 4, fontWeight: 500 }}>
+                    Select class
+                </div>
+            </div>
+            
             {/* Active Tab Content */}
             <div style={{ padding: '0 4px', position: 'relative' }}>
                 <ClassCarouselStyle />
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
-                    <div style={{ fontSize: 11, fontWeight: 600, color: C.textSec, textTransform: 'uppercase' }}>Class</div>
-                    {sortedClasses.length > 2 && <div style={{ fontSize: 10, color: C.textSec, fontStyle: 'italic' }}>Swipe for more →</div>}
-                </div>
                 
                 <div style={{ position: 'relative' }}>
-                    <div className="re-class-scroll" style={{ display: 'flex', gap: 10, marginBottom: 18, paddingBottom: 4 }}>
+                    <div className="re-class-scroll" style={{ display: 'flex', gap: 10, marginBottom: 24, paddingBottom: 4 }}>
                         {sortedClasses.map(cls => {
                             const isSel = sel.class === cls;
-                            const profile = getClassProfile(currentSeg.carrier, cls);
+                            const lowestPrice = getLowest(cls, currentSeg.offers);
                             return (
-                                <label key={cls} style={{ border: `2px solid ${isSel ? C.primary : C.borderInput}`, background: isSel ? C.primaryLight : C.surface, borderRadius: 9, padding: '12px 14px', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: 6, minWidth: 160, flex: '0 0 auto', transition: 'border-color 0.15s, background 0.15s' }}>
+                                <label key={cls} style={{
+                                    border: `1.5px solid ${isSel ? C.primary : C.borderInput}`, 
+                                    background: isSel ? C.primaryLight : C.surface, 
+                                    borderRadius: 12, 
+                                    padding: '10px 16px', 
+                                    cursor: 'pointer', 
+                                    display: 'flex', 
+                                    flexDirection: 'column',
+                                    alignItems: 'flex-start',
+                                    justifyContent: 'center',
+                                    gap: 4, 
+                                    minWidth: 100,
+                                    flex: '0 0 auto', 
+                                    transition: 'border-color 0.15s, background 0.15s',
+                                    boxShadow: isSel ? '0 2px 6px rgba(208,16,90,0.1)' : 'none'
+                                }}>
                                     <input type="radio" checked={isSel} onChange={() => setSegmentSelections(p => ({ ...p, [currentSeg.id]: { class: cls, flexibility: null } }))} style={{ display: 'none' }} />
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                        <RadioDot selected={isSel} />
-                                        <span style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{cls}</span>
-                                    </div>
-                                    {profile?.description && (
-                                        <div style={{ fontSize: 10, color: isSel ? '#9D1345' : C.textSec, paddingLeft: 25, lineHeight: 1.3 }}>{profile.description}</div>
-                                    )}
-                                    <div style={{ fontSize: 12, color: isSel ? C.primary : C.textSec, paddingLeft: 25, fontWeight: 700 }}>From €{getLowest(cls, currentSeg.offers)?.toFixed(2)}</div>
-                                    
-                                    {profile?.amenities && profile.amenities.length > 0 && (
-                                        <div style={{ paddingLeft: 2, marginTop: 4, display: 'flex', flexDirection: 'column', gap: 4 }}>
-                                            <div style={{ width: '100%', height: 1, background: isSel ? 'rgba(208,16,90,0.15)' : '#F0F0F0', margin: '2px 0 4px' }} />
-                                            {profile.amenities.slice(0, 4).map((am, idx) => (
-                                                <div key={idx} style={{ fontSize: 10, color: am.highlight ? (isSel ? '#9D1345' : '#374151') : '#64748B', display: 'flex', alignItems: 'center', gap: 5, fontWeight: am.highlight ? 600 : 400 }}>
-                                                    <span style={{ fontSize: 12 }}>{am.icon}</span> {am.label}
-                                                </div>
-                                            ))}
-                                            {profile.amenities.length > 4 && <div style={{ fontSize: 10, color: '#94A3B8', paddingLeft: 17 }}>+{profile.amenities.length - 4} more</div>}
-                                        </div>
+                                    <span style={{ fontSize: 13, fontWeight: 700, color: isSel ? C.primary : C.text }}>{cls}</span>
+                                    {lowestPrice !== null && (
+                                        <span style={{ fontSize: 12, fontWeight: 600, color: isSel ? C.primary : C.textSec }}>
+                                            from €{lowestPrice.toFixed(2)}
+                                        </span>
                                     )}
                                 </label>
                             );
@@ -188,16 +202,23 @@ export function FarePanelTabs({ solution, onSelectionChange }: FarePanelProps) {
                             {classOffers.map(offer => {
                                 const isSel = sel.flexibility === offer.id;
                                 return (
-                                    <label key={offer.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: `2px solid ${isSel ? C.primary : C.borderInput}`, background: isSel ? C.primaryLight : C.surface, borderRadius: 9, padding: '13px 14px', cursor: 'pointer' }}>
-                                        <input type="radio" checked={isSel} onChange={() => handleSelectFlexibility(currentSeg.id, offer.id)} style={{ display: 'none' }} />
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                                            <RadioDot selected={isSel} />
-                                            <div>
-                                                <div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{offer.tariffName || 'Standard'}</div>
-                                                <FlexTag flexibility={offer.flexibility} />
+                                    <label key={offer.id} style={{ display: 'flex', flexDirection: 'column', border: `2px solid ${isSel ? C.primary : C.borderInput}`, background: isSel ? C.primaryLight : C.surface, borderRadius: 9, padding: '11px 14px', cursor: 'pointer' }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                            <input type="radio" checked={isSel} onChange={() => handleSelectFlexibility(currentSeg.id, offer.id)} style={{ display: 'none' }} />
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                                                <RadioDot selected={isSel} />
+                                                <div>
+                                                    <div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{offer.tariffName || 'Standard'}</div>
+                                                    <FlexTag flexibility={offer.flexibility} />
+                                                </div>
                                             </div>
+                                            <div style={{ fontSize: 15, fontWeight: 700, color: isSel ? C.primary : C.text }}>€{offer.price.toFixed(2)}</div>
                                         </div>
-                                        <div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>€{offer.price.toFixed(2)}</div>
+                                        {isSel && (
+                                            <div style={{ marginTop: 8, paddingLeft: 27, fontSize: 12, color: C.textSec, lineHeight: 1.4 }}>
+                                                {getConditions(offer.flexibility)}
+                                            </div>
+                                        )}
                                     </label>
                                 );
                             })}

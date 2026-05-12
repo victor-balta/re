@@ -5,6 +5,7 @@ import SleeperEdgeCasePage from './pages/SleeperEdgeCasePage.tsx'
 import DetailsPage from './pages/DetailsPage.tsx'
 import PaymentPage from './pages/PaymentPage.tsx'
 import NightTrainVisualizer from './pages/NightTrainVisualizer.tsx'
+import TabsPage from './pages/TabsPage.tsx'
 import './index.css'
 
 function Router() {
@@ -29,8 +30,12 @@ function Router() {
     if (route === '#/night-train') {
         return <NightTrainVisualizer />
     }
+    if (route === '#/original') {
+        return <App />
+    }
 
-    return <App />
+    // Default to the new Tabs UI
+    return <TabsPage />
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

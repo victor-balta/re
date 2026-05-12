@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { X, ArrowRight } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { X, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { SimplifiedSolution } from '../utils/data-processor';
 import { FarePanel } from './FarePanel';
+import { FarePanelAccordion } from './FarePanelAccordion';
 import { format, parseISO } from 'date-fns';
 import { CarrierBadge } from './FarePanel';
 
@@ -11,6 +12,7 @@ interface MobileModalProps {
     onSelectionChange: (solutionId: string, totalPrice: number | null, hasCompleteSelection: boolean) => void;
     hasCompleteSelection: boolean;
     totalPrice: number | null;
+    continueLabel?: string;
     onContinue: () => void;
 }
 
@@ -175,7 +177,87 @@ function MobileJourneyTimeline({ solution }: { solution: SimplifiedSolution }) {
     );
 }
 
-export function MobileModal({ solution, onClose, onSelectionChange, hasCompleteSelection, totalPrice, onContinue }: MobileModalProps) {
+/**
+ * Collapsible journey summary.
+ * Collapsed (default): compact one-line route bar.
+ * Expanded: full vertical timeline with layover banners.
+ */
+function JourneyOverview({ solution }: { solution: SimplifiedSolution }) {
+    const [expanded, setExpanded] = useState(false);
+    const origin = solution.segments[0]?.origin ?? '';
+    const destination = solution.segments[solution.segments.length - 1]?.destination ?? '';
+    const duration = solution.duration.replace('PT', '').replace('H', 'h ').replace('M', 'm');
+
+    return (
+        <div style={{ marginBottom: 20, paddingBottom: 16, borderBottom: '1px solid #EBEBEB' }}>
+            {/* ── Compact summary — always visible ── */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10 }}>
+                {/* Times + route */}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
+                        <span style={{ fontSize: 18, fontWeight: 800, color: C.text, letterSpacing: '-0.3px' }}>
+                            {fmtTime(solution.departure)}
+                        </span>
+                        <span style={{ fontSize: 13, color: C.textSec, fontWeight: 500 }}>→</span>
+                        <span style={{ fontSize: 18, fontWeight: 800, color: C.text, letterSpacing: '-0.3px' }}>
+                            {fmtTime(solution.arrival)}
+                        </span>
+                    </div>
+                    <div style={{ fontSize: 13, color: C.textSec, marginTop: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {origin.split(' ').slice(0, 2).join(' ')} → {destination.split(' ').slice(0, 2).join(' ')}
+                    </div>
+                </div>
+
+                {/* Duration + transfers */}
+                <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                    <div style={{ fontSize: 12, fontWeight: 600, color: C.textSec }}>{duration}</div>
+                    <span style={{
+                        fontSize: 11, fontWeight: 700,
+                        color: solution.transfers === 0 ? '#059669' : '#92400E',
+                        background: solution.transfers === 0 ? '#ECFDF5' : '#FFFBEB',
+                        borderRadius: 20, padding: '2px 8px',
+                        border: `1px solid ${solution.transfers === 0 ? '#A7F3D0' : '#FDE68A'}`,
+                        display: 'inline-block', marginTop: 3,
+                    }}>
+                        {solution.transfers === 0
+                            ? 'Direct'
+                            : `${solution.transfers} change${solution.transfers > 1 ? 's' : ''}`}
+                    </span>
+                </div>
+            </div>
+
+            {/* Carriers row */}
+            <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginTop: 10 }}>
+                {solution.carriers.map((c, i) => <CarrierBadge key={i} name={c} />)}
+                <span style={{ fontSize: 12, color: '#888', alignSelf: 'center' }}>· {format(parseISO(solution.departure), 'EEE d MMM')}</span>
+            </div>
+
+            {/* ── Toggle button ── */}
+            <button
+                onClick={() => setExpanded(e => !e)}
+                style={{
+                    background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+                    display: 'flex', alignItems: 'center', gap: 4, marginTop: 12,
+                    fontSize: 13, fontWeight: 600, color: C.primary,
+                }}
+            >
+                {expanded ? 'Hide journey details' : 'View journey details'}
+                {expanded
+                    ? <ChevronUp style={{ width: 16, height: 16 }} />
+                    : <ChevronDown style={{ width: 16, height: 16 }} />}
+            </button>
+
+            {/* ── Expanded timeline ── */}
+            {expanded && (
+                <div style={{ marginTop: 14 }}>
+                    <MobileJourneyTimeline solution={solution} />
+                </div>
+            )}
+        </div>
+    );
+}
+
+export function MobileModal({ solution, onClose, onSelectionChange, hasCompleteSelection, totalPrice, continueLabel, onContinue }: MobileModalProps) {
     const origin = solution.segments[0]?.origin ?? '';
     const destination = solution.segments[solution.segments.length - 1]?.destination ?? '';
     const isMulti = solution.segments.length > 1;
@@ -207,43 +289,8 @@ export function MobileModal({ solution, onClose, onSelectionChange, hasCompleteS
             {/* ── Scrollable body ── */}
             <div className="re-modal-body" style={{ flex: 1, overflowY: 'auto', padding: '20px 20px 120px' }}>
 
-                {/* Journey overview */}
-                <div style={{ marginBottom: 20, paddingBottom: 20, borderBottom: '1px solid #EBEBEB' }}>
-                    {/* Route title */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
-                        <div>
-                            <div style={{ fontSize: 16, fontWeight: 700, color: C.text }}>
-                                {origin.split(' ').slice(0, 2).join(' ')} to {destination.split(' ').slice(0, 2).join(' ')}
-                            </div>
-                            <div style={{ fontSize: 12, color: '#888', marginTop: 2 }}>
-                                {format(parseISO(solution.departure), 'EEE d MMMM')} · 1 adult
-                            </div>
-                        </div>
-                        {/* Transfer badge */}
-                        <div style={{ flexShrink: 0, marginTop: 3 }}>
-                            <span style={{
-                                fontSize: 11, fontWeight: 700,
-                                color: solution.transfers === 0 ? '#059669' : '#92400E',
-                                background: solution.transfers === 0 ? '#ECFDF5' : '#FFFBEB',
-                                borderRadius: 20, padding: '3px 10px',
-                                border: `1px solid ${solution.transfers === 0 ? '#A7F3D0' : '#FDE68A'}`,
-                            }}>
-                                {solution.transfers === 0
-                                    ? 'Direct'
-                                    : `${solution.transfers} change${solution.transfers > 1 ? 's' : ''}`}
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* Carriers row */}
-                    <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginBottom: 14 }}>
-                        {solution.carriers.map((c, i) => <CarrierBadge key={i} name={c} />)}
-                        <span style={{ fontSize: 12, color: '#888', alignSelf: 'center' }}>· {solution.duration}</span>
-                    </div>
-
-                    {/* Full itinerary timeline */}
-                    <MobileJourneyTimeline solution={solution} />
-                </div>
+                {/* Journey overview — collapsible */}
+                <JourneyOverview solution={solution} />
 
                 {/* Multi-leg info banner */}
                 {isMulti && (
@@ -263,7 +310,11 @@ export function MobileModal({ solution, onClose, onSelectionChange, hasCompleteS
                 )}
 
                 {/* Fare selection panel */}
-                <FarePanel solution={solution} onSelectionChange={onSelectionChange} />
+                {isMulti && !(solution.segments[0]?.offers[0]?.rawName?.includes(' | ')) ? (
+                    <FarePanelAccordion solution={solution} onSelectionChange={onSelectionChange} />
+                ) : (
+                    <FarePanel solution={solution} onSelectionChange={onSelectionChange} />
+                )}
             </div>
 
             {/* ── Sticky CTA ── */}
@@ -271,7 +322,7 @@ export function MobileModal({ solution, onClose, onSelectionChange, hasCompleteS
                 {hasCompleteSelection && totalPrice != null ? (
                     <button onClick={onContinue}
                         style={{ width: '100%', background: '#D0105A', color: '#fff', borderRadius: 50, padding: '14px 0', fontSize: 14, fontWeight: 700, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-                        Continue · €{totalPrice.toFixed(2)} <ArrowRight style={{ width: 16, height: 16 }} />
+                        {continueLabel || 'Continue'} · €{totalPrice.toFixed(2)} <ArrowRight style={{ width: 16, height: 16 }} />
                     </button>
                 ) : (
                     <button disabled style={{ width: '100%', background: '#E5E5E5', color: '#AAAAAA', borderRadius: 50, padding: '14px 0', fontSize: 14, fontWeight: 700, border: 'none', cursor: 'not-allowed' }}>
